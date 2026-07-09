@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+260711,1,1,4ms,12kb,Blocked system call: clone.,NO,0
+260711,2,2,0ms,12kb,Blocked system call: clone.,NO,0
+260711,3,3,0ms,12kb,Blocked system call: clone.,NO,0
+260711,4,4,4ms,8kb,Blocked system call: clone.,NO,0
+260711,5,5,4ms,8kb,Blocked system call: clone.,NO,0
+260711,6,6,8ms,2404kb,Blocked system call: clone.,NO,0
+260711,7,7,16ms,4284kb,Blocked system call: clone.,NO,0
+260711,8,8,12ms,3952kb,Blocked system call: clone.,NO,0
+260711,9,9,12ms,4252kb,Killed by signal 11(SIGSEGV).,NO,0
+260711,10,10,16ms,3560kb,Blocked system call: clone.,NO,0

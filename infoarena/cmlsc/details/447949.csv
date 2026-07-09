@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+447949,1,1,0ms,12kb,Non-zero exit status.,NO,0
+447949,2,2,0ms,8kb,Non-zero exit status.,NO,0
+447949,3,3,0ms,8kb,Non-zero exit status.,NO,0
+447949,4,4,0ms,12kb,Killed by signal 11(SIGSEGV).,NO,0
+447949,5,5,0ms,8kb,Killed by signal 11(SIGSEGV).,NO,0
+447949,6,6,4ms,12kb,Killed by signal 11(SIGSEGV).,NO,0
+447949,7,7,4ms,236kb,Killed by signal 11(SIGSEGV).,NO,0
+447949,8,8,8ms,232kb,Killed by signal 11(SIGSEGV).,NO,0
+447949,9,9,4ms,236kb,Killed by signal 11(SIGSEGV).,NO,0
+447949,10,10,4ms,8kb,Killed by signal 11(SIGSEGV).,NO,0

@@ -1,0 +1,22 @@
+program unu;
+var     f,g:text;
+        a,b,cmmdc,t,i:integer;
+begin
+        assign(f,'euclid2.in'); reset(f);
+        assign(g,'euclid2.out'); rewrite(g);
+        readln(f,t);
+        for i:=1 to t do begin
+                read(f,a,b);
+                if a*b=0 then cmmdc:=a+b
+                        else begin
+                                while a<>b do
+                                        if a>b then a:=a-b
+                                                else b:=b-a;
+                                cmmdc:=a;
+                                end;
+                writeln(g,cmmdc);
+                readln(f);
+                end;
+        close(f); close(g);
+end.
+

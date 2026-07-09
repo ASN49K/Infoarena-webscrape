@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+955858,1,1,0ms,236kb,Blocked system call: (null).,NO,0
+955858,2,2,0ms,236kb,Blocked system call: (null).,NO,0
+955858,3,2,0ms,236kb,Blocked system call: (null).,NO,0
+955858,4,3,32ms,244kb,Blocked system call: (null).,NO,0
+955858,5,4,44ms,320kb,Blocked system call: (null).,NO,0
+955858,6,5,60ms,400kb,Blocked system call: (null).,NO,0
+955858,7,6,76ms,484kb,Blocked system call: (null).,NO,0
+955858,8,6,84ms,Depăşit,Memory limit exceeded.,NO,0
+955858,9,6,60ms,Depăşit,Memory limit exceeded.,NO,0
+955858,10,6,84ms,Depăşit,Memory limit exceeded.,NO,0

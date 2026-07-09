@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+151950,1,1,4ms,8kb,Raspuns corect!,YES,10
+151950,2,2,0ms,8kb,Lungime incorecta!,YES,0
+151950,3,3,0ms,8kb,Lungime incorecta!,YES,0
+151950,4,4,4ms,12kb,Lungime incorecta!,YES,0
+151950,5,5,4ms,16kb,Lungime incorecta!,YES,0
+151950,6,6,0ms,12kb,Lungime incorecta!,YES,0
+151950,7,7,4ms,200kb,Wall time limit exceeded.,NO,0
+151950,8,8,4ms,204kb,Wall time limit exceeded.,NO,0
+151950,9,9,4ms,196kb,Wall time limit exceeded.,NO,0
+151950,10,10,12ms,224kb,Killed by signal 11(SIGSEGV).,NO,0

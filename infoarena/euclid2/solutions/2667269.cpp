@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+ifstream fin("euclid2.in");
+ofstream fout("euclid2.out");
+
+int cmmdc(int a,int b)
+{
+    int r;
+    while(b!=0)
+    {
+        r=a%b;
+        a=b;
+        b=r;
+    }
+    return a;
+}
+int main()
+{
+    int n,a,b,x;
+    fin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        fin>>a>>b;
+        x=cmmdc(max(a,b),min(a,b));
+        fout<<x<<'\n';
+    }
+    return 0;
+}

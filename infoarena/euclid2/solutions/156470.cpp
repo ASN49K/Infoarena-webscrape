@@ -1,0 +1,29 @@
+#include<fstream.h>
+
+ifstream fin("euclid2.in");
+ofstream fout("euclid2.out");
+long n;
+long long x,y;
+
+int cmmdc(long long a,long long b){
+    if(b==0)
+       return a;
+     return cmmdc(b,a%b);
+  }
+
+
+void citire(){
+     fin>>n;
+     for(int i=0;i<n;i++){
+	 fin>>x>>y;
+	fout<<cmmdc(x,y);
+	 fout<<'\n';
+     }
+ }
+
+int main(){
+     citire();
+     fin.close();
+     fout.close();
+   return 0;
+}

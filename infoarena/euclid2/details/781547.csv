@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+781547,1,1,0ms,248kb,Fisier de iesire lipsa,NO,0
+781547,2,2,0ms,248kb,Fisier de iesire lipsa,NO,0
+781547,3,2,0ms,248kb,Fisier de iesire lipsa,NO,0
+781547,4,3,56ms,248kb,Fisier de iesire lipsa,NO,0
+781547,5,4,92ms,248kb,Fisier de iesire lipsa,NO,0
+781547,6,5,112ms,248kb,Fisier de iesire lipsa,NO,0
+781547,7,6,140ms,248kb,Fisier de iesire lipsa,NO,0
+781547,8,6,168ms,252kb,Fisier de iesire lipsa,NO,0
+781547,9,6,132ms,252kb,Fisier de iesire lipsa,NO,0
+781547,10,6,Depăşit,252kb,Time limit exceeded.,NO,0

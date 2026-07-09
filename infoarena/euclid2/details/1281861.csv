@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1281861,1,1,0ms,396kb,Killed by signal 8(SIGFPE).,NO,0
+1281861,2,2,0ms,384kb,Killed by signal 8(SIGFPE).,NO,0
+1281861,3,2,0ms,380kb,Killed by signal 8(SIGFPE).,NO,0
+1281861,4,3,8ms,Depăşit,Memory limit exceeded.,NO,0
+1281861,5,4,8ms,Depăşit,Memory limit exceeded.,NO,0
+1281861,6,5,8ms,Depăşit,Memory limit exceeded.,NO,0
+1281861,7,6,8ms,Depăşit,Memory limit exceeded.,NO,0
+1281861,8,6,8ms,Depăşit,Memory limit exceeded.,NO,0
+1281861,9,6,8ms,Depăşit,Memory limit exceeded.,NO,0
+1281861,10,6,8ms,Depăşit,Memory limit exceeded.,NO,0

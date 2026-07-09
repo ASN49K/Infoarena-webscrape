@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+/* Varianta 60 puncte
+
+
+
+*/
+
+int main()
+{
+   int a,b;
+   cin>>a>>b;
+
+   while(a!=b)
+   {
+      if(a>b) a = a - b;
+      else b = b - a;
+   }
+   cout<<a;
+}

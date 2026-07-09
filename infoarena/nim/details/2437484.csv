@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2437484,1,1,2ms,131kb,OK,YES,10
+2437484,2,2,2ms,131kb,OK,YES,10
+2437484,3,3,2ms,131kb,OK,YES,10
+2437484,4,4,2ms,131kb,Killed by Signal 11,NO,0
+2437484,5,5,2ms,131kb,Killed by Signal 11,NO,0
+2437484,6,6,2ms,131kb,Killed by Signal 11,NO,0
+2437484,7,7,2ms,131kb,Killed by Signal 11,NO,0
+2437484,8,8,2ms,131kb,Killed by Signal 11,NO,0
+2437484,9,9,2ms,131kb,Killed by Signal 11,NO,0
+2437484,10,10,2ms,131kb,Killed by Signal 11,NO,0

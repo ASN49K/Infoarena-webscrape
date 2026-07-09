@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+455830,1,1,0ms,12kb,Fisier de iesire lipsa: 0 puncte,NO,0
+455830,2,2,0ms,8kb,Fisier de iesire lipsa: 0 puncte,NO,0
+455830,3,2,0ms,8kb,Fisier de iesire lipsa: 0 puncte,NO,0
+455830,4,3,12ms,Depăşit,Memory limit exceeded.,NO,0
+455830,5,4,20ms,Depăşit,Memory limit exceeded.,NO,0
+455830,6,5,20ms,Depăşit,Memory limit exceeded.,NO,0
+455830,7,6,12ms,Depăşit,Memory limit exceeded.,NO,0
+455830,8,6,20ms,Depăşit,Memory limit exceeded.,NO,0
+455830,9,6,16ms,Depăşit,Memory limit exceeded.,NO,0
+455830,10,6,20ms,Depăşit,Memory limit exceeded.,NO,0

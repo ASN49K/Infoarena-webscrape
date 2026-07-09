@@ -1,0 +1,33 @@
+#include <fstream.h>
+//#include <iostream.h>
+//#include "lib.h"
+
+ifstream fin("cmlsc.in");
+ofstream fout("cmlsc.out");
+
+int m,n;
+
+int main() {
+	int lp=1, vlp=1;
+	fin>>m>>n;
+	int c[10000];
+	memset(c,0,sizeof(c));
+	int a[10000], b[10000];
+	for(int i=1;i<=m;i++) 
+		fin>>a[i];
+	for(int i=1;i<=n;i++)
+		fin>>b[i];
+	for(int i=1;i<=m;i++) {
+		for(int j=lp+1;j<=n;j++) {
+			if(a[i] == b[j]) {
+				c[vlp]=a[i];
+				vlp++;
+				lp=j;
+				j=n+1; //ca sa iasa din for j
+			}
+		}
+	}
+	fout<<vlp-1<<'\n';
+	for(int i=1;i<vlp; i++)
+		fout<<c[i]<<" ";
+}

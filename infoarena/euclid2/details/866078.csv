@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+866078,1,1,0ms,240kb,OK,YES,10
+866078,2,2,0ms,244kb,OK,YES,20
+866078,3,2,0ms,240kb,OK,YES,20
+866078,4,3,28ms,240kb,OK,YES,10
+866078,5,4,40ms,240kb,OK,YES,10
+866078,6,5,52ms,240kb,OK,YES,10
+866078,7,6,64ms,240kb,OK,YES,0
+866078,8,6,76ms,240kb,OK,YES,0
+866078,9,6,Depăşit,244kb,Time limit exceeded.,NO,0
+866078,10,6,Depăşit,240kb,Time limit exceeded.,NO,0

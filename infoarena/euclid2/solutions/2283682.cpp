@@ -1,0 +1,22 @@
+#include <fstream>
+using namespace std;
+long long int t , a , b ,d;
+int main(){
+    ifstream fin("euclid2.in");
+    ofstream fout("euclid2.out");
+    fin>>t;
+    for(int i=1 ; i<=t ; i++){
+        for(int j=1 ; j<=2 ; j++){
+                fin>>a>>b;
+                while(b!=0){
+                    d=a%b;
+                    a=b;
+                    b=d;
+                }
+        }
+        fout<<a<<endl;
+    }
+
+    return 0;
+}
+

@@ -1,0 +1,6 @@
+# Indicatii de rezolvare - euclid2
+# https://www.infoarena.ro/problema/euclid2
+
+O scurta prezentare a acestui subiect gasiti aici (https://en.wikipedia.org/wiki/Greatest_common_divisor).
+
+Cel mai mare divizor comun dintre doua numere a si b se poate calcula iterativ, printr-o simpla parcurgere a tuturor numerelor de la 2 la minim(a, b). Aceasta rezolvare se gaseste aici (https://www.infoarena.ro/job_detail/153457?action=view-source) si obtine 30 de puncte. Pentru a imbunatati timpul de rulare putem folosi algoritmul lui Euclid (https://en.wikipedia.org/wiki/Euclidean_algorithm) prin scaderi (https://www.infoarena.ro/job_detail/153459?action=view-source), ceea ce duce la obtinerea a 60 de puncte, sau prin impartiri, solutie (https://www.infoarena.ro/job_detail/153481?action=view-source) ce obtine punctajul maxim.

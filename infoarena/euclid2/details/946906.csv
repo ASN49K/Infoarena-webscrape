@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+946906,1,1,0ms,360kb,OK,YES,10
+946906,2,2,0ms,360kb,OK,YES,20
+946906,3,2,0ms,360kb,OK,YES,20
+946906,4,3,24ms,364kb,OK,YES,10
+946906,5,4,36ms,364kb,OK,YES,10
+946906,6,5,52ms,360kb,OK,YES,10
+946906,7,6,60ms,360kb,OK,YES,40
+946906,8,6,72ms,360kb,OK,YES,40
+946906,9,6,72ms,360kb,OK,YES,40
+946906,10,6,120ms,364kb,OK,YES,40

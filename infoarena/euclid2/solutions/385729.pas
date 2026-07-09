@@ -1,0 +1,24 @@
+var a,b,c,i,n:integer;
+    f,g:text;
+begin
+assign(f,'euclid2.in');
+reset(f);
+assign(g,'euclid2.out');
+rewrite(g);
+readln(g,n);
+for i:=1 to n do
+    begin
+    readln(f,a);
+    readln(f,b);
+    c:=a;
+    while c<>0 do
+          begin
+          c:=a mod b;
+          a:=b;
+          b:=c;
+          end;
+    writeln(g,a);
+    end;
+close(f);
+close(g);
+end.

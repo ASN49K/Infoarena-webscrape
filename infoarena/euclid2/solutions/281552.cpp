@@ -1,0 +1,17 @@
+#include <fstream.h>
+ifstream  f("euclid2.in");
+ofstream g("euclid2.out");
+long i,t,a,b,r;
+int main ()
+{f>>t;
+for (i=1; i<=t; i++)
+{f>>a>>b;
+while (b!=0)
+{r=a%b;
+a=b;
+b=r;}
+g<<a<<"\n";}
+f.close();
+g.close();
+return 0;}
+

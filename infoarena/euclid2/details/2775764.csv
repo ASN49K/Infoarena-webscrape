@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2775764,1,1,98ms,4173kb,Non zero exit status: 1,NO,0
+2775764,2,2,95ms,4042kb,Non zero exit status: 1,NO,0
+2775764,3,2,80ms,4042kb,Non zero exit status: 1,NO,0
+2775764,4,3,99ms,4042kb,Non zero exit status: 1,NO,0
+2775764,5,4,80ms,4173kb,Non zero exit status: 1,NO,0
+2775764,6,5,90ms,4173kb,Non zero exit status: 1,NO,0
+2775764,7,6,80ms,4173kb,Non zero exit status: 1,NO,0
+2775764,8,6,86ms,4173kb,Non zero exit status: 1,NO,0
+2775764,9,6,99ms,4042kb,Non zero exit status: 1,NO,0
+2775764,10,6,104ms,4042kb,Non zero exit status: 1,NO,0

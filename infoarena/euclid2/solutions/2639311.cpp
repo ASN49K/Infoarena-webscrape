@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+ifstream f("date.in");
+int cmmdc(int a,int b)
+{
+    int r=0;
+    
+    while (b!=0)
+    {
+        r = a % b;
+        a=b;
+        b=r;    
+    }
+    return a;  
+}
+int main()
+{
+    int nr;
+    f>>nr;
+    int x,y;
+    for(int i=0;i<nr;i++)
+        {
+            f>>x,f>>y;
+            cout<<cmmdc(x,y)<<endl;
+        }
+ return 0;
+}

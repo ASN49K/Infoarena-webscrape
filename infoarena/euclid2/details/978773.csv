@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+978773,1,1,0ms,236kb,OK,YES,10
+978773,2,2,0ms,236kb,OK,YES,20
+978773,3,2,0ms,236kb,OK,YES,20
+978773,4,3,40ms,240kb,Incorect,YES,0
+978773,5,4,64ms,236kb,Incorect,YES,0
+978773,6,5,80ms,236kb,Incorect,YES,0
+978773,7,6,104ms,236kb,Incorect,YES,0
+978773,8,6,120ms,236kb,Incorect,YES,0
+978773,9,6,112ms,240kb,Incorect,YES,0
+978773,10,6,200ms,240kb,Incorect,YES,0

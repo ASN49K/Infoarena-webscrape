@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1766492,1,1,0ms,92kb,Blocked system call: (null).,NO,0
+1766492,2,2,0ms,108kb,Non-zero exit status.,NO,0
+1766492,3,2,0ms,104kb,Non-zero exit status.,NO,0
+1766492,4,3,0ms,88kb,Blocked system call: (null).,NO,0
+1766492,5,4,0ms,108kb,Non-zero exit status.,NO,0
+1766492,6,5,0ms,88kb,Blocked system call: (null).,NO,0
+1766492,7,6,0ms,100kb,Non-zero exit status.,NO,0
+1766492,8,6,0ms,96kb,Blocked system call: (null).,NO,0
+1766492,9,6,0ms,108kb,Non-zero exit status.,NO,0
+1766492,10,6,0ms,104kb,Non-zero exit status.,NO,0

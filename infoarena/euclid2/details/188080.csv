@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+188080,1,1,4ms,12kb,Killed by signal 8(SIGFPE).,NO,0
+188080,2,2,0ms,8kb,Killed by signal 8(SIGFPE).,NO,0
+188080,3,2,0ms,8kb,Killed by signal 8(SIGFPE).,NO,0
+188080,4,3,0ms,8kb,Killed by signal 8(SIGFPE).,NO,0
+188080,5,4,0ms,8kb,Killed by signal 8(SIGFPE).,NO,0
+188080,6,5,0ms,12kb,Killed by signal 8(SIGFPE).,NO,0
+188080,7,6,0ms,8kb,Killed by signal 8(SIGFPE).,NO,0
+188080,8,6,4ms,12kb,Killed by signal 8(SIGFPE).,NO,0
+188080,9,6,4ms,12kb,Killed by signal 8(SIGFPE).,NO,0
+188080,10,6,0ms,8kb,Killed by signal 8(SIGFPE).,NO,0

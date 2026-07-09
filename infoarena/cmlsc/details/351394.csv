@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+351394,1,1,0ms,12kb,Fisier de iesire corupt!,NO,0
+351394,2,2,0ms,8kb,Fisier de iesire corupt!,NO,0
+351394,3,3,0ms,12kb,Subsir incorect!,YES,0
+351394,4,4,40ms,384kb,Killed by signal 11(SIGSEGV).,NO,0
+351394,5,5,16ms,380kb,Killed by signal 11(SIGSEGV).,NO,0
+351394,6,6,Depăşit,388kb,Time limit exceeded.,NO,0
+351394,7,7,92ms,392kb,Killed by signal 11(SIGSEGV).,NO,0
+351394,8,8,Depăşit,388kb,Time limit exceeded.,NO,0
+351394,9,9,52ms,388kb,Killed by signal 11(SIGSEGV).,NO,0
+351394,10,10,80ms,388kb,Killed by signal 11(SIGSEGV).,NO,0

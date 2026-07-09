@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2969319,1,1,19ms,20496kb,Memory limit exceeded,NO,0
+2969319,2,2,15ms,19812kb,Killed by Signal 9,NO,0
+2969319,3,3,15ms,19750kb,Killed by Signal 9,NO,0
+2969319,4,4,14ms,19873kb,Killed by Signal 9,NO,0
+2969319,5,5,14ms,19820kb,Killed by Signal 9,NO,0
+2969319,6,6,14ms,20238kb,Killed by Signal 9,NO,0
+2969319,7,7,14ms,19976kb,Killed by Signal 9,NO,0
+2969319,8,8,13ms,19976kb,Killed by Signal 9,NO,0
+2969319,9,9,12ms,19795kb,Killed by Signal 9,NO,0
+2969319,10,10,12ms,19976kb,Killed by Signal 9,NO,0

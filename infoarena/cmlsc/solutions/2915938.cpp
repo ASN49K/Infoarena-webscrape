@@ -1,0 +1,41 @@
+#include <fstream>
+using namespace std;
+ifstream cin("cmlsc.in");
+ofstream cout("cmlsc.out");
+int i, j, n, m, k;
+int a[1030], b[1030], d[1030][1030], v[1030];
+int main() {
+    cin>>n>>m;
+    for(i=1;i<=n;i++)
+        cin>>a[i];
+    for(j=1;j<=m;j++)
+        cin>>b[j];
+    for(i=1;i<=n;i++)
+        for(j=1;j<=m;j++){
+           if(a[i]==b[j])
+                d[i][j]=d[i-1][j-1]+1;
+           else
+                d[i][j]=max(d[i-1][j], d[i][j-1]);
+        }
+    cout<<d[n][m];
+    i=n;
+    j=m;
+    while(i>=1 && j>=1){
+        if(a[i]==b[j]){
+            v[++k]=a[i];
+            i--;
+            j--;
+        }
+        else{
+            if(d[i-1][j]>d[i][j-1])
+                i--;
+            else
+                j--;
+        }
+    }
+    cout<<"\n";
+    for(i=k;i>=1;i--)
+        cout<<v[i]<<" ";
+
+
+}

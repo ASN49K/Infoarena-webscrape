@@ -1,0 +1,12 @@
+# Indicatii de rezolvare - nim
+# https://www.infoarena.ro/problema/nim
+
+Jocul imparţial propus în această problemă se numeşte jocul NIM (https://en.wikipedia.org/wiki/Nim), stând la baza teoriei jocurilor. Numim stare câştigătoare o configuraţie a grămezilor pentru care primul jucător are strategie sigură de câştig, respectiv stare necâştigătoare o configuraţie pentru care primul jucător va pierde. Se observă că stările câştigătoare corespund situaţiilor în care suma XOR a numerelor de pietre din grămezi este mai mare ca 0.
+
+Pentru a demonstra acest lucru, următoarele condiţii sunt necesare şi suficiente:
+
+Dintr-o stare cu suma XOR 0, se poate ajunge doar în stări cu suma XOR pozitivă, sau jocul se termină. Scăzând din orice grămadă o cantitate pozitivă, evident vom schimba configuraţia binară a numărului de pietre cu cel puţin un bit, deci şi suma XOR. Jocul se termină când toate grămezile au 0 pietre, deci şi suma XOR este 0.
+
+Dintr-o stare cu suma XOR nenulă, se poate ajunge într-o stare cu suma XOR 0. Căutăm o grămadă cu un număr X de pietre, care are, în reprezentarea sa binară, valoarea 1 pe poziţia bitului cel mai semnificativ al sumei XOR, să o notăm cu S. Din acea grămadă se vor scădea X - (X XOR S) pietre, (X XOR S) fiind mai mic decât X deoarece se anulează bitul cel mai semnificativ al lui S. Suma XOR rămasă după scădere este egală cu 0.
+
+O implementare de 100 de puncte gasiti aici (https://www.infoarena.ro/job_detail/608541?action=view-source). Pentru o demonstraţie mai pe larg şi alte variante de joc NIM, puteţi consulta acest articol (http://www.math.ucla.edu/~tom/Game_Theory/comb.pdf), dar si cel despre teoria jocurilor (https://www.infoarena.ro/numerele-sprague-grundy) de pe infoarena.

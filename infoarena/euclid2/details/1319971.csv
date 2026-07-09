@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1319971,1,1,0ms,432kb,Incorect,YES,0
+1319971,2,2,0ms,436kb,Incorect,YES,0
+1319971,3,2,0ms,436kb,Incorect,YES,0
+1319971,4,3,20ms,444kb,Incorect,YES,0
+1319971,5,4,32ms,444kb,Incorect,YES,0
+1319971,6,5,44ms,440kb,Incorect,YES,0
+1319971,7,6,56ms,444kb,Incorect,YES,0
+1319971,8,6,68ms,440kb,Incorect,YES,0
+1319971,9,6,68ms,444kb,Incorect,YES,0
+1319971,10,6,116ms,444kb,Incorect,YES,0

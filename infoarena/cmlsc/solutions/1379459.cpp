@@ -1,0 +1,26 @@
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+int i, j, n, m, dp[1025][1025];
+char a[1025],b[1025];
+int main()
+{
+    freopen("cmlsc.in","r",stdin);
+    freopen("cmlsc.out","w",stdout);
+    scanf("%d%d",&n,&m);
+    for(i=1;i<=n;i++)
+        scanf("%d",&a[i]);
+    for(i=1;i<=m;i++)
+        scanf("%d",&b[i]);
+    for (i=1; i<=n; i++)
+        for (j=1; j<=m; j++)
+        {
+            if (a[i]==b[j])
+                dp[i][j]=dp[i-1][j-1]+1;
+            else
+                dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
+        }
+    printf("%d\n",dp[n][m]);
+    return 0;
+}

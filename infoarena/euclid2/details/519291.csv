@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+519291,1,1,4ms,8kb,OK,YES,10
+519291,2,2,0ms,8kb,OK,YES,20
+519291,3,2,0ms,12kb,OK,YES,20
+519291,4,3,48ms,92kb,Non-zero exit status.,NO,0
+519291,5,4,16ms,88kb,Non-zero exit status.,NO,0
+519291,6,5,0ms,12kb,Incorect,YES,0
+519291,7,6,0ms,8kb,Incorect,YES,0
+519291,8,6,0ms,8kb,Incorect,YES,0
+519291,9,6,8ms,92kb,Incorect,YES,0
+519291,10,6,0ms,12kb,Incorect,YES,0

@@ -1,0 +1,20 @@
+#include    <fstream>
+
+using namespace std;
+
+ifstream fin("euclid2.in");
+ofstream fout("euclid2.out");
+
+int main()
+{
+    int nr1, nr2, rest;
+    fin >> nr1 >> nr2;
+    while(nr2 != 0) //while(nr2)
+    {
+        rest = nr1 % nr2;
+        nr1 = nr2;
+        nr2 = rest;
+    }
+    fout << nr1;
+    return 0;
+}

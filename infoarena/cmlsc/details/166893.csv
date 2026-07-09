@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+166893,1,1,0ms,8kb,Subsir incorect!,YES,0
+166893,2,2,0ms,12kb,Subsir incorect!,YES,0
+166893,3,3,4ms,8kb,Raspuns corect!,YES,10
+166893,4,4,4ms,12kb,Raspuns corect!,YES,10
+166893,5,5,4ms,8kb,Subsir incorect!,YES,0
+166893,6,6,8ms,2292kb,Wall time limit exceeded.,NO,0
+166893,7,7,20ms,4220kb,Wall time limit exceeded.,NO,0
+166893,8,8,12ms,3900kb,Wall time limit exceeded.,NO,0
+166893,9,9,16ms,4268kb,Subsir incorect!,YES,0
+166893,10,10,12ms,3492kb,Subsir incorect!,YES,0

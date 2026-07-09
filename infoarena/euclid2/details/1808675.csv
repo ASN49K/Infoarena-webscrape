@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1808675,1,1,0ms,412kb,Fisier de iesire lipsa,NO,0
+1808675,2,2,0ms,408kb,Fisier de iesire lipsa,NO,0
+1808675,3,2,0ms,408kb,Fisier de iesire lipsa,NO,0
+1808675,4,3,0ms,372kb,Killed by signal 11(SIGSEGV).,NO,0
+1808675,5,4,0ms,372kb,Killed by signal 11(SIGSEGV).,NO,0
+1808675,6,5,0ms,372kb,Killed by signal 11(SIGSEGV).,NO,0
+1808675,7,6,0ms,376kb,Killed by signal 11(SIGSEGV).,NO,0
+1808675,8,6,0ms,372kb,Killed by signal 11(SIGSEGV).,NO,0
+1808675,9,6,0ms,372kb,Killed by signal 11(SIGSEGV).,NO,0
+1808675,10,6,0ms,376kb,Killed by signal 11(SIGSEGV).,NO,0

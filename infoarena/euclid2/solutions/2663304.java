@@ -1,0 +1,34 @@
+package euclid;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Solution {
+
+    public static int gcd(int a, int b) {
+        if(b == 0) {
+            return a;
+        }
+        return gcd(b, a%b);
+    }
+    public static void main(String[] args) throws IOException {
+        File input = new File("euclid2.in");
+        Scanner reader = new Scanner(input);
+
+        FileWriter output = new FileWriter("euclid2.out");
+
+        int t = reader.nextInt();
+
+        Integer out;
+        for(int i = 0; i < t; i++) {
+            int a = reader.nextInt();
+            int b = reader.nextInt();
+            out = gcd(a, b);
+            output.write(out.toString() + "\n");
+        }
+        reader.close();
+        output.close();
+    }
+}

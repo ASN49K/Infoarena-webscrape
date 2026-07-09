@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2770008,1,1,2ms,131kb,Lungime incorecta!,YES,0
+2770008,2,2,2ms,131kb,Killed by Signal 11,NO,0
+2770008,3,3,2ms,131kb,Killed by Signal 11,NO,0
+2770008,4,4,3ms,262kb,Killed by Signal 11,NO,0
+2770008,5,5,3ms,262kb,Killed by Signal 11,NO,0
+2770008,6,6,6ms,917kb,Lungime incorecta!,YES,0
+2770008,7,7,11ms,1966kb,Killed by Signal 11,NO,0
+2770008,8,8,9ms,1966kb,Killed by Signal 11,NO,0
+2770008,9,9,13ms,2228kb,Killed by Signal 11,NO,0
+2770008,10,10,9ms,1835kb,Killed by Signal 11,NO,0

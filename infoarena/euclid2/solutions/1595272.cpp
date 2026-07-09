@@ -1,0 +1,26 @@
+#include<fstream>
+using namespace std;
+ifstream fin("euclid2.in");
+ofstream fout("euclid2.out");
+int t,i,a,r,b;
+int main()
+{
+    fin>>t;
+    if(t<=100000&&t>=1)
+   {
+         for(i=1;i<=t;i++)
+        {
+         fin>>a>>b;
+         while(b!=0)
+        {
+          r=a%b;
+          a=b;
+          b=r;
+        }
+         fout<<a<<'\n';
+        }
+    }
+    fin.close();
+    fout.close();
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    ifstream fin ("euclid2.in");
+    ofstream fout  ("euclid2.out");
+    int n;
+    fin >> n;
+    for (int i = 1; i <= n; ++i) {
+        int x, y;
+        fin >> x >> y;
+        fout << __gcd(x, y) << '\n';
+    }
+    return 0;
+}
+

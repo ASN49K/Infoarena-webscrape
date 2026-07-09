@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+586966,1,1,0ms,8kb,Raspuns corect!,YES,10
+586966,2,2,0ms,8kb,Raspuns corect!,YES,10
+586966,3,3,0ms,12kb,Raspuns corect!,YES,10
+586966,4,4,120ms,Depăşit,Memory limit exceeded.,NO,0
+586966,5,5,4ms,12kb,Non-zero exit status.,NO,0
+586966,6,6,4ms,12kb,Non-zero exit status.,NO,0
+586966,7,7,4ms,8kb,Non-zero exit status.,NO,0
+586966,8,8,4ms,8kb,Non-zero exit status.,NO,0
+586966,9,9,4ms,8kb,Non-zero exit status.,NO,0
+586966,10,10,4ms,12kb,Non-zero exit status.,NO,0

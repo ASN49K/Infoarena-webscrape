@@ -1,0 +1,26 @@
+#include<fstream>
+using namespace std;
+
+fstream fin("euclid2.in", ios::in);
+fstream fout("euclid2.out", ios::out);
+
+void cmmdc(int x, int y)
+{
+    while(x!=y)
+    { if(x>y) x=x-y;
+    else y=y-x; }
+    fout<<x<<'\n';
+    return;
+}
+
+int main()
+{
+    int a,b,t,i;
+    fin>>t;
+    for(i=1; i<=t; i++)
+    {
+        fin>>a>>b;
+        cmmdc(a,b);
+    }
+    return 0;
+}

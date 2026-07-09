@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+694110,1,1,0ms,252kb,Lungime incorecta!,YES,0
+694110,2,2,0ms,248kb,Lungime incorecta!,YES,0
+694110,3,3,0ms,248kb,Lungime incorecta!,YES,0
+694110,4,4,0ms,248kb,Non-zero exit status.,NO,0
+694110,5,5,0ms,248kb,Non-zero exit status.,NO,0
+694110,6,6,0ms,252kb,Non-zero exit status.,NO,0
+694110,7,7,0ms,252kb,Non-zero exit status.,NO,0
+694110,8,8,0ms,248kb,Non-zero exit status.,NO,0
+694110,9,9,0ms,248kb,Non-zero exit status.,NO,0
+694110,10,10,0ms,248kb,Non-zero exit status.,NO,0

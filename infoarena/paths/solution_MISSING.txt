@@ -1,0 +1,2 @@
+# NO 'Indicatii de rezolvare' for problem 'paths'
+# https://www.infoarena.ro/problema/paths

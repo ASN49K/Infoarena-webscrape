@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2925667,1,1,0ms,184kb,Raspuns corect!,YES,10
+2925667,2,2,16ms,3649kb,Killed by Signal 11,NO,0
+2925667,3,3,12ms,3854kb,Killed by Signal 11,NO,0
+2925667,4,4,102ms,1101kb,Time limit exceeded,NO,0
+2925667,5,5,77ms,4661kb,Killed by Signal 11,NO,0
+2925667,6,6,13ms,3981kb,Killed by Signal 11,NO,0
+2925667,7,7,102ms,4509kb,Time limit exceeded,NO,0
+2925667,8,8,29ms,4759kb,Killed by Signal 11,NO,0
+2925667,9,9,19ms,4509kb,Killed by Signal 11,NO,0
+2925667,10,10,101ms,3723kb,Time limit exceeded,NO,0

@@ -1,0 +1,32 @@
+#include <fstream>
+
+using namespace std;
+
+ifstream f("cmlsc.in");
+ofstream g("cmlsc.out");
+
+int n,i,j,a[1025],b[1025],c[1025],d[1025][1025],lh=0,m;
+
+int main () {
+    f >> m >> n;
+    for (i=1;i<=m;i++) f >> a[i];
+    for (j=1;j<=n;j++) f >> b[j];
+    for (i=1;i<=m;i++)
+        for (j=1;j<=n;j++)
+            if (a[i]==b[j]) d[i][j]=d[i-1][j-1]+1;
+                else d[i][j]=max(d[i-1][j],d[i][j-1]);
+    i=m;j=n;
+    while (i!=0)
+        if (a[i]==b[j]) {
+            lh++;c[lh]=a[i];
+            i--;j--;
+        }
+        else{
+          if (d[i-1][j]<d[i][j-1]) j--;
+                              else i--;}
+    g << lh << '\n';
+    for (i=lh;i>=1;i--)
+        g << c[i] << ' ';
+    f.close();g.close();
+    return 0;
+}

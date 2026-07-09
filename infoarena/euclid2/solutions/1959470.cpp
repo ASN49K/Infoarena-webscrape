@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>;
+
+using namespace std;
+ifstream f("euclid2.in");
+ofstream g("euclid2.out");
+int cmmdc(int a, int b){
+
+if (a!=0) return cmmdc(b % a, a); else return b;
+
+
+
+}
+
+int main()
+{
+    int n;
+    f>>n;
+    for (int i=0; i<n; i++){
+    int a,b;
+
+ f>>a>>b;
+
+
+
+g<<cmmdc(a,b);
+
+    }
+    return 0;
+}

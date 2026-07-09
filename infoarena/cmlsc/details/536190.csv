@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+536190,1,1,0ms,12kb,Raspuns corect!,YES,10
+536190,2,2,0ms,12kb,Non-zero exit status.,NO,0
+536190,3,3,0ms,8kb,Non-zero exit status.,NO,0
+536190,4,4,0ms,8kb,Non-zero exit status.,NO,0
+536190,5,5,0ms,8kb,Raspuns corect!,YES,10
+536190,6,6,16ms,1128kb,Raspuns corect!,YES,10
+536190,7,7,20ms,2144kb,Non-zero exit status.,NO,0
+536190,8,8,20ms,1968kb,Non-zero exit status.,NO,0
+536190,9,9,28ms,2108kb,Raspuns corect!,YES,10
+536190,10,10,24ms,1724kb,Raspuns corect!,YES,10

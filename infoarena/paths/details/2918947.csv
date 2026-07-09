@@ -1,0 +1,26 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2918947,1,1,1ms,184kb,OK,YES,8
+2918947,2,1,2ms,184kb,OK,YES,8
+2918947,3,2,11ms,307kb,OK,YES,12
+2918947,4,2,13ms,307kb,OK,YES,12
+2918947,5,2,9ms,438kb,OK,YES,12
+2918947,6,3,288ms,483kb,OK,YES,16
+2918947,7,3,419ms,528kb,OK,YES,16
+2918947,8,3,178ms,487kb,OK,YES,16
+2918947,9,3,261ms,479kb,OK,YES,16
+2918947,10,4,805ms,581kb,Time limit exceeded,NO,0
+2918947,11,4,803ms,577kb,Time limit exceeded,NO,0
+2918947,12,4,802ms,573kb,Time limit exceeded,NO,0
+2918947,13,4,803ms,585kb,Time limit exceeded,NO,0
+2918947,14,4,802ms,577kb,Time limit exceeded,NO,0
+2918947,15,5,1ms,184kb,Killed by Signal 11,NO,0
+2918947,16,5,2ms,217kb,Killed by Signal 11,NO,0
+2918947,17,5,1ms,184kb,Killed by Signal 11,NO,0
+2918947,18,6,1ms,184kb,Killed by Signal 11,NO,0
+2918947,19,6,2ms,184kb,Killed by Signal 11,NO,0
+2918947,20,6,1ms,184kb,Killed by Signal 11,NO,0
+2918947,21,6,1ms,184kb,Killed by Signal 11,NO,0
+2918947,22,6,1ms,184kb,Killed by Signal 11,NO,0
+2918947,23,6,1ms,184kb,Killed by Signal 11,NO,0
+2918947,24,6,2ms,184kb,Killed by Signal 11,NO,0
+2918947,25,6,1ms,184kb,Killed by Signal 11,NO,0

@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2127774,1,1,0ms,1248kb,Raspuns corect!,YES,10
+2127774,2,2,0ms,1252kb,Lungime incorecta!,YES,0
+2127774,3,3,0ms,1248kb,Lungime incorecta!,YES,0
+2127774,4,4,0ms,1260kb,Killed by signal 6(SIGABRT).,NO,0
+2127774,5,5,0ms,1252kb,Killed by signal 6(SIGABRT).,NO,0
+2127774,6,6,0ms,1256kb,Killed by signal 11(SIGSEGV).,NO,0
+2127774,7,7,0ms,1252kb,Killed by signal 11(SIGSEGV).,NO,0
+2127774,8,8,0ms,1256kb,Killed by signal 11(SIGSEGV).,NO,0
+2127774,9,9,0ms,1256kb,Killed by signal 11(SIGSEGV).,NO,0
+2127774,10,10,0ms,1256kb,Killed by signal 11(SIGSEGV).,NO,0

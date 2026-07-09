@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2449004,1,1,83ms,4173kb,Fisier de iesire corupt!,NO,0
+2449004,2,2,93ms,4042kb,Raspuns corect!,YES,10
+2449004,3,3,94ms,4173kb,Non zero exit status: 1,NO,0
+2449004,4,4,223ms,4567kb,Non zero exit status: 1,NO,0
+2449004,5,5,232ms,4698kb,Non zero exit status: 1,NO,0
+2449004,6,6,402ms,7319kb,Time limit exceeded,NO,0
+2449004,7,7,401ms,11382kb,Time limit exceeded,NO,0
+2449004,8,8,402ms,11513kb,Time limit exceeded,NO,0
+2449004,9,9,401ms,12431kb,Time limit exceeded,NO,0
+2449004,10,10,402ms,10850kb,Time limit exceeded,NO,0

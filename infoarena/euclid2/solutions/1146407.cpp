@@ -1,0 +1,27 @@
+#include<fstream>
+using namespace std;
+ifstream in("euclid.in");
+ofstream out("euclid.out");
+
+int euclid(int a,int b)
+{
+    int r;
+    while(b!=0)
+    {
+        r=a%b;
+        a=b;
+        b=r;
+    }
+    return a;
+}
+
+int main ()
+{
+    int n,a,b,r,i;
+    in>>n;
+    for(i=1;i<=n;i++)
+    {
+        in>>a>>b;
+        out<<euclid(a,b)<<'\n';
+    }
+}

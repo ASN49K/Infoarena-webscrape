@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2255720,1,1,0ms,1380kb,Raspuns corect!,YES,10
+2255720,2,2,0ms,1388kb,Raspuns corect!,YES,10
+2255720,3,3,0ms,1384kb,Raspuns corect!,YES,10
+2255720,4,4,0ms,1596kb,Killed by signal 11(SIGSEGV).,NO,0
+2255720,5,5,Depăşit,1656kb,Time limit exceeded.,NO,0
+2255720,6,6,4ms,2956kb,Killed by signal 11(SIGSEGV).,NO,0
+2255720,7,7,Depăşit,4952kb,Time limit exceeded.,NO,0
+2255720,8,8,8ms,5004kb,Killed by signal 11(SIGSEGV).,NO,0
+2255720,9,9,8ms,5468kb,Killed by signal 11(SIGSEGV).,NO,0
+2255720,10,10,4ms,4676kb,Killed by signal 11(SIGSEGV).,NO,0

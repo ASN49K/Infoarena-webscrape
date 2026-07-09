@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int lnko(int a,int b)
+{
+    if(b==0)return a;
+    else lnko(b,a%b);
+}
+
+
+int  main()
+{
+    int l,m,n;
+    ifstream f("euclid2.in");
+    ofstream g("euclid2.out");
+    f>>l;
+    while(l-->0){
+        f>>n>>m;
+        g<<lnko(n,m)<<endl;
+    }
+
+}

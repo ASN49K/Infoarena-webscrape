@@ -1,0 +1,26 @@
+#include<cstdio>
+
+int cmmdc(int a, int b) {
+  if(a % b == 0)
+    return b;
+  if(b % a == 0)
+    return a;
+  cmmdc(b, a % b);
+}
+
+int main() {
+
+  FILE* in = fopen("euclid2.in", "r");
+  FILE* out = fopen("euclid2.out", "w");
+  int a, b;
+
+  int n;
+  fscanf(in, "%d", &n);
+  for(int i = 0; i < n; ++i) {
+    fscanf(in, "%d%d", &a, &b);
+    fprintf(out, "%d\n", cmmdc(a, b));
+  }
+  //fprintf(stdout, "%d\n", c);
+
+  return 0;
+}

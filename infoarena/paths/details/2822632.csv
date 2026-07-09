@@ -1,0 +1,26 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2822632,1,1,6ms,4792kb,OK,YES,8
+2822632,2,1,6ms,4718kb,OK,YES,8
+2822632,3,2,16ms,4837kb,OK,YES,12
+2822632,4,2,11ms,4718kb,OK,YES,12
+2822632,5,2,15ms,4837kb,OK,YES,12
+2822632,6,3,267ms,4890kb,OK,YES,16
+2822632,7,3,209ms,4947kb,OK,YES,16
+2822632,8,3,266ms,4898kb,OK,YES,16
+2822632,9,3,160ms,4878kb,OK,YES,16
+2822632,10,4,803ms,4976kb,Time limit exceeded,NO,0
+2822632,11,4,803ms,4988kb,Time limit exceeded,NO,0
+2822632,12,4,692ms,4952kb,OK,YES,0
+2822632,13,4,619ms,4980kb,OK,YES,0
+2822632,14,4,802ms,4976kb,Time limit exceeded,NO,0
+2822632,15,5,235ms,10788kb,OK,YES,12
+2822632,16,5,249ms,12431kb,OK,YES,12
+2822632,17,5,225ms,10690kb,OK,YES,12
+2822632,18,6,804ms,9691kb,Time limit exceeded,NO,0
+2822632,19,6,802ms,12189kb,Time limit exceeded,NO,0
+2822632,20,6,804ms,12132kb,Time limit exceeded,NO,0
+2822632,21,6,803ms,11157kb,Time limit exceeded,NO,0
+2822632,22,6,804ms,12148kb,Time limit exceeded,NO,0
+2822632,23,6,803ms,13651kb,Time limit exceeded,NO,0
+2822632,24,6,803ms,12148kb,Time limit exceeded,NO,0
+2822632,25,6,803ms,9412kb,Time limit exceeded,NO,0

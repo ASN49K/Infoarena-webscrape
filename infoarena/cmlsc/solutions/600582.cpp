@@ -1,0 +1,98 @@
+#include <fstream>
+
+using namespace std;
+
+
+ifstream fi;
+ofstream fo;
+int m,n;
+short A[1024];
+short B[1024];
+short sol[1024][1024];
+bool mu[1024][1024];
+bool ml[1024][1024];
+int max;
+short bla[1024];
+
+int sus, sta, ss;
+
+int maxim(int a, int b)
+{
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+
+int main()
+{
+    fi.open ("cmlsc.in");
+    fi >> m >> n;
+    for (int i=1; i<=m; i++)
+        fi >> A[i];
+    for (int i=1; i<=n; i++)
+        fi >> B[i];
+    fi.close();
+    for (int i=0; i<=m; i++)
+        for (int j=0; j<=n; j++)
+        {
+            sol[i][j] = 0;
+            mu[i][j] = false;
+            ml[i][j] = false;
+        }
+    for (int i=1; i<=m; i++)
+        for (int j=1; j<=n; j++)
+            {
+                if (A[i] == B[j])
+                {
+                    sol[i][j] = sol[i-1][j-1] + 1;
+                    mu[i][j] = true;
+                    ml[i][j] = true;
+                }
+                else
+                {
+                    if (sol[i-1][j] >= sol[i][j-1])
+                    {
+                        mu[i][j] = true;
+                        sol[i][j] = sol[i-1][j];
+                    }
+                    else
+                    {
+                        ml[i][j] = true;
+                        sol[i][j] = sol[i][j-1];
+                    }
+                }
+                //tiparire();
+                //system("PAUSE");
+                //cout << endl;
+            }
+    fo.open("cmlsc.out");
+    fo << sol[m][n] << endl;
+
+    int i = m;
+    int j = n;
+    int k = sol[m][n];
+    int k2 = k;
+
+    while (true)
+    {
+        if ((ml[i][j] == true) && (mu[i][j] == true))
+        {
+            bla[k2] = A[i];
+            --i;
+            --j;
+            --k2;
+        }
+        else
+        if (mu[i][j] == true)
+            --i;
+        else
+            --j;
+        if (k2 == 0)
+            break;
+    }
+    for (i=1; i<=k; i++)
+        fo << bla[i] << " ";
+    fo.close();
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include <stdio.h>
+using namespace std;
+int main()
+{
+    int n;
+    freopen("euclid2.in", "r", stdin);
+    freopen("euclid2.out", "w", stdout);
+    scanf("%d",&n);
+    for(int a=1;a<=n;a++)
+    {
+        unsigned long long x,y,c;
+        scanf("%d %d",&x,&y);
+        while(y)
+        {
+            c=x%y;
+            x=y;
+            y=c;
+        }
+        printf("%d\n",x);
+    }
+}

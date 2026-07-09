@@ -1,0 +1,6 @@
+# Indicatii de rezolvare - cmlsc
+# https://www.infoarena.ro/problema/cmlsc
+
+Problema celui mai lung subsir comun pentru doua siruri A si B se poate rezolva in timp exponential prin metoda backtracking (https://en.wikipedia.org/wiki/Backtracking). Sursa unei astfel de abordari se gaseste aici (https://www.infoarena.ro/job_detail/143062?action=view-source) si obtine 30 de puncte. O solutie mai eficienta are complexitatea O(M * N), daca se utilizeaza programarea dinamica. Algoritmul din spatele unei astfel de rezolvari este foarte bine explicat atat pe wikipedia (https://en.wikipedia.org/wiki/Longest_common_subsequence_problem), cat si in cartea Introducere in algoritmi, Thomas Cormen, editura Agora, Cluj-Napoca.
+
+Sursa de 100 de puncte ce foloseste programarea dinamica se gaseste aici (https://www.infoarena.ro/job_detail/143144?action=view-source).

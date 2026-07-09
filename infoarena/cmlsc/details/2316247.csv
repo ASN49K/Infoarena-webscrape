@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2316247,1,1,2ms,131kb,Raspuns corect!,YES,10
+2316247,2,2,2ms,131kb,Raspuns corect!,YES,10
+2316247,3,3,2ms,131kb,Raspuns corect!,YES,10
+2316247,4,4,20ms,393kb,Raspuns corect!,YES,10
+2316247,5,5,25ms,393kb,Raspuns corect!,YES,10
+2316247,6,6,103ms,1703kb,Time limit exceeded,NO,0
+2316247,7,7,103ms,3801kb,Time limit exceeded,NO,0
+2316247,8,8,101ms,3801kb,Time limit exceeded,NO,0
+2316247,9,9,101ms,4325kb,Time limit exceeded,NO,0
+2316247,10,10,101ms,3407kb,Time limit exceeded,NO,0

@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1952001,1,1,0ms,96kb,OK,YES,10
+1952001,2,2,0ms,104kb,OK,YES,20
+1952001,3,2,0ms,100kb,OK,YES,20
+1952001,4,3,24ms,96kb,Blocked system call: (null).,NO,0
+1952001,5,4,24ms,96kb,Blocked system call: (null).,NO,0
+1952001,6,5,48ms,96kb,Blocked system call: (null).,NO,0
+1952001,7,6,0ms,100kb,Blocked system call: (null).,NO,0
+1952001,8,6,4ms,96kb,Blocked system call: (null).,NO,0
+1952001,9,6,152ms,100kb,Incorect,YES,0
+1952001,10,6,8ms,96kb,Blocked system call: (null).,NO,0

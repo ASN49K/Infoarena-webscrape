@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+501752,1,1,0ms,8kb,Lungime incorecta!,YES,0
+501752,2,2,0ms,8kb,Non-zero exit status.,NO,0
+501752,3,3,0ms,12kb,Non-zero exit status.,NO,0
+501752,4,4,Depăşit,5896kb,Time limit exceeded.,NO,0
+501752,5,5,Depăşit,5816kb,Time limit exceeded.,NO,0
+501752,6,6,0ms,12kb,Non-zero exit status.,NO,0
+501752,7,7,4ms,8kb,Non-zero exit status.,NO,0
+501752,8,8,4ms,12kb,Non-zero exit status.,NO,0
+501752,9,9,0ms,8kb,Non-zero exit status.,NO,0
+501752,10,10,0ms,12kb,Non-zero exit status.,NO,0

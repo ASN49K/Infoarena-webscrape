@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1288278,1,1,0ms,104kb,Fisier de iesire corupt!,NO,0
+1288278,2,2,0ms,108kb,Fisier de iesire corupt!,NO,0
+1288278,3,3,0ms,108kb,Fisier de iesire corupt!,NO,0
+1288278,4,4,0ms,108kb,Non-zero exit status.,NO,0
+1288278,5,5,0ms,104kb,Non-zero exit status.,NO,0
+1288278,6,6,0ms,104kb,Non-zero exit status.,NO,0
+1288278,7,7,0ms,104kb,Non-zero exit status.,NO,0
+1288278,8,8,0ms,104kb,Non-zero exit status.,NO,0
+1288278,9,9,0ms,104kb,Non-zero exit status.,NO,0
+1288278,10,10,0ms,104kb,Non-zero exit status.,NO,0

@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2715065,1,1,2ms,131kb,Subsir incorect!,YES,0
+2715065,2,2,2ms,131kb,Fisier de iesire corupt!,NO,0
+2715065,3,3,2ms,262kb,Subsir incorect!,YES,0
+2715065,4,4,5ms,917kb,Subsir incorect!,YES,0
+2715065,5,5,5ms,1179kb,Subsir incorect!,YES,0
+2715065,6,6,10ms,2228kb,Subsir incorect!,YES,0
+2715065,7,7,18ms,4325kb,Fisier de iesire corupt!,NO,0
+2715065,8,8,17ms,3932kb,Subsir incorect!,YES,0
+2715065,9,9,18ms,4325kb,Subsir incorect!,YES,0
+2715065,10,10,15ms,3538kb,Subsir incorect!,YES,0

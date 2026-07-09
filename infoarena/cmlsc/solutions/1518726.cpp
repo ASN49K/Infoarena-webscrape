@@ -1,0 +1,86 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+ifstream in("cmlsc.in");
+ofstream out("cmlsc.out");
+int a[1025],b[1025],c[1025][1025],m,n,v[1025],k;
+void afis(int,int);
+int main()
+{
+    int i,j;
+    in >> n >> m;
+
+    for(i = 1; i <= n; ++i)
+        in >> a[i];
+
+    for(j = 1; j <= m; ++j)
+        in >> b[j];
+
+    for( i = 1; i <= n; ++i)
+        for(j = 1; j <= m; ++j)
+            if(a[i] == b[j])
+                c[i][j] = c[i-1][j-1] + 1;
+            else
+            {
+                if(c[i-1][j] >= c[i][j-1])
+                    c[i][j] = c[i-1][j];
+                else
+                    c[i][j] = c[i][j-1];
+            }
+    out << c[n][m] << endl;
+
+    afis(n,m);
+   /* i = n;
+    j = m;
+    k = c[n][m];
+
+    while( i && j)
+    {
+        if(a[i] == b[j])
+        {
+            v[k--] = a[i];
+            i--;
+            j--;
+        }
+        else
+        {
+            if( c[i-1][j] >= c[i][j-1])
+                i--;
+            else
+                j--;
+        }
+    }
+
+    for(int i = 1; i <= c[n][m]; i++)
+        out << v[i] << " ";
+        */
+    return 0;
+}
+void afis(int i, int j)
+{
+    if( i && j)
+    {
+        if(a[i] == b[j])
+        {
+            //v[k--] = a[i];
+            // i--;
+            //j--;
+            afis(i-1,j-1);
+            out << a[i] << " ";
+        }
+        else
+        {
+            if( c[i-1][j] >= c[i][j-1])
+            {
+                afis(i-1,j);
+            }
+            else
+            {
+                afis(i,j-1);
+            }
+
+        }
+    }
+    else
+        return;
+}

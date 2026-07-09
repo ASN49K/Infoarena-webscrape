@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+681390,1,1,0ms,396kb,Fisier de iesire corupt!,NO,0
+681390,2,2,0ms,396kb,Fisier de iesire corupt!,NO,0
+681390,3,3,0ms,396kb,Fisier de iesire corupt!,NO,0
+681390,4,4,0ms,344kb,Killed by signal 11(SIGSEGV).,NO,0
+681390,5,5,0ms,344kb,Killed by signal 11(SIGSEGV).,NO,0
+681390,6,6,0ms,348kb,Killed by signal 11(SIGSEGV).,NO,0
+681390,7,7,0ms,348kb,Killed by signal 11(SIGSEGV).,NO,0
+681390,8,8,0ms,348kb,Killed by signal 11(SIGSEGV).,NO,0
+681390,9,9,0ms,356kb,Killed by signal 11(SIGSEGV).,NO,0
+681390,10,10,0ms,352kb,Killed by signal 11(SIGSEGV).,NO,0

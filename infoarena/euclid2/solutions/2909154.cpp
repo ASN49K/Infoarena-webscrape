@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+ ifstream in("euclid2.in");
+ ofstream out("euclid2.out");
+int main()
+{
+    int a,b,t;
+    cin>>t;
+    for(int i=1; i<=t; i++)
+    {
+        cin>>a>>b;
+        while(b!=0)
+        {
+            int r=a%b;
+            a=b;
+            b=r;
+        }
+        cout<<a<<"\n";
+    }
+
+    return 0;
+}

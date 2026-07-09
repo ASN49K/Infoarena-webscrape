@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2685819,1,1,3ms,131kb,Fisier de iesire corupt!,NO,0
+2685819,2,2,3ms,131kb,Fisier de iesire corupt!,NO,0
+2685819,3,3,3ms,131kb,Raspuns corect!,YES,10
+2685819,4,4,4ms,524kb,Fisier de iesire corupt!,NO,0
+2685819,5,5,4ms,655kb,Fisier de iesire corupt!,NO,0
+2685819,6,6,7ms,1179kb,Fisier de iesire corupt!,NO,0
+2685819,7,7,13ms,2097kb,Fisier de iesire corupt!,NO,0
+2685819,8,8,12ms,1966kb,Lungime incorecta!,YES,0
+2685819,9,9,13ms,2097kb,Killed by Signal 11,NO,0
+2685819,10,10,11ms,1835kb,Lungime incorecta!,YES,0

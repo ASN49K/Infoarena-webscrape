@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+713977,1,1,0ms,248kb,Raspuns corect!,YES,10
+713977,2,2,0ms,252kb,Lungime incorecta!,YES,0
+713977,3,3,0ms,248kb,Lungime incorecta!,YES,0
+713977,4,4,8ms,624kb,Lungime incorecta!,YES,0
+713977,5,5,8ms,628kb,Lungime incorecta!,YES,0
+713977,6,6,80ms,1664kb,Lungime incorecta!,YES,0
+713977,7,7,Depăşit,1936kb,Time limit exceeded.,NO,0
+713977,8,8,Depăşit,2132kb,Time limit exceeded.,NO,0
+713977,9,9,Depăşit,2192kb,Time limit exceeded.,NO,0
+713977,10,10,Depăşit,2184kb,Time limit exceeded.,NO,0

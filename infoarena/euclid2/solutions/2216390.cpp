@@ -1,0 +1,37 @@
+#include <fstream>
+#include <vector>
+#include <cmath>
+#include <cstring>
+#include <utility>
+#include <algorithm>
+
+
+using namespace std;
+
+ifstream cin("euclid2.in");
+ofstream cout("euclid2.out");
+
+int cmmdc(int a,int b)
+{
+    int r=a%b;
+    while(r!=0)
+        {
+            a=b;
+            b=r;
+            r=a%b;
+        }
+    return b;
+}
+int main()
+{int n,i,x,y;
+cin>>n;
+for(i=1;i<=n;i++)
+{
+    cin>>x>>y;
+    cout<<cmmdc(x,y)<<endl;
+}
+
+
+
+    return 0;
+}

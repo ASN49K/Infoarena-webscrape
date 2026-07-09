@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<fstream.h>
+int main ()
+{
+	fstream f,g;
+	long long int a,b,i,n;
+	f.open("euclid.in",ios::in);
+	g.open("euclid.out",ios::out);
+	f>>n;
+	for (i=0;i<n;i++)
+	{
+	f>>a>>b;
+	while (a!=b)
+	{
+		if (a>b) a=a-b;
+		else b=b-a;
+	}
+	g<<a<<'\n';
+	}
+	f.close();
+	g.close();
+}

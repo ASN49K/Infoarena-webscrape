@@ -1,0 +1,44 @@
+#include <stdio.h> 
+#include <string.h> 
+#include <stdlib.h> 
+
+void euclid(int a, int b, FILE* output)
+{
+	int r; 
+	
+		while(1){
+			r = a % b; 
+			if(r == 0){
+				fprintf(output, "%i\n", b); 
+				break; 
+			}
+			a = b;  
+			b = r; 
+		}
+
+} 
+
+int main()
+{
+	FILE* input; 
+	FILE* output; 
+	output = fopen("euclid2.out", "a"); 
+	input = fopen("euclid2.in", "r"); 
+	if(input == NULL){
+		printf("NU s-a deschis fisierul\n");
+	} 
+	int T; 
+	fscanf(input, "%i", &T); 
+	int i; 
+	for(i = 0; i < T; i++){
+		int a,b; 
+		fscanf(input, "%i", &a); 
+		fscanf(input, "%i", &b); 
+		euclid(a, b, output); 
+	} 
+
+	fclose(input); 
+	fclose(output);
+
+	return 0; 
+}

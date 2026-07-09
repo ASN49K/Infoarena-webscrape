@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int gcb(int x, int y)
+{
+	if (!y)  return x;
+	return gcb(y, x % y);
+}
+
+int main()
+{
+	freopen("euclid2.in","r",stdin);
+	freopen("euclid2.out","w",stdout);
+	int t;
+	scanf("%d",&t);
+	while (t--)
+	{
+		int a, b;
+		scanf("%d %d",&a, &b);
+		printf("%d\n",gcb(a,b));
+	}
+	return 0;
+}

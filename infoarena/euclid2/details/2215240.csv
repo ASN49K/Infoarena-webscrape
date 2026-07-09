@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2215240,1,1,0ms,1316kb,OK,YES,10
+2215240,2,2,0ms,1320kb,Killed by signal 8(SIGFPE).,NO,0
+2215240,3,2,0ms,1316kb,Killed by signal 8(SIGFPE).,NO,0
+2215240,4,3,Depăşit,1324kb,Time limit exceeded.,NO,0
+2215240,5,4,Depăşit,1324kb,Time limit exceeded.,NO,0
+2215240,6,5,Depăşit,1320kb,Time limit exceeded.,NO,0
+2215240,7,6,Depăşit,1320kb,Time limit exceeded.,NO,0
+2215240,8,6,Depăşit,1316kb,Time limit exceeded.,NO,0
+2215240,9,6,4ms,1324kb,Killed by signal 8(SIGFPE).,NO,0
+2215240,10,6,Depăşit,1320kb,Time limit exceeded.,NO,0

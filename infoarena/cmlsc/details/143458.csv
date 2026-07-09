@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+143458,1,1,4ms,8kb,Lungime incorecta!,YES,0
+143458,2,2,0ms,8kb,Raspuns corect!,YES,10
+143458,3,3,4ms,8kb,Raspuns corect!,YES,10
+143458,4,4,4ms,8kb,Fisier de iesire corupt!,NO,0
+143458,5,5,4ms,8kb,Raspuns corect!,YES,10
+143458,6,6,8ms,2216kb,Lungime incorecta!,YES,0
+143458,7,7,12ms,4100kb,Fisier de iesire corupt!,NO,0
+143458,8,8,16ms,3760kb,Fisier de iesire corupt!,NO,0
+143458,9,9,24ms,4116kb,Wall time limit exceeded.,NO,0
+143458,10,10,20ms,3372kb,Lungime incorecta!,YES,0

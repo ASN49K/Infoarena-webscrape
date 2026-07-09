@@ -1,0 +1,30 @@
+#include<fstream>
+using namespace std;
+ifstream g("euclid2.in");
+ofstream f("euclid2.out");
+long n , a ,b;
+long cmmdc(int a , int b)
+{
+	int r;
+	while(b!=0)
+	{
+		r=a%b;
+		a=b;
+		b=r;
+	}
+return a;
+}
+int main ()
+{
+	g>>n;
+	while(n)
+	{
+		g>>a;
+		g>>b;
+		f<<cmmdc(a,b)<<'\n';
+		n--;
+	}
+	f.close();
+	g.close();
+return 0;
+}

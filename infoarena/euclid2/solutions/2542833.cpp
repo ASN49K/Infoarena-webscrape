@@ -1,0 +1,36 @@
+#include <iostream>
+
+#include <fstream>
+
+using namespace std;
+
+int n,a,b,r;
+int eucl(int a,int b)
+{
+    if(b==0)
+    return a;
+    return eucl (b,a%b);
+}
+
+int main()
+{
+    ifstream fin("euclid2.in");
+    ofstream fout("euclid2.out");
+
+    fin>>n;
+
+    for(int i=1;i<=n;i++)
+    {
+
+        fin>>a;
+        fin>>b;
+
+        fout<<eucl(a,b)<<endl;
+
+    }
+    fin.close();
+    fout.close();
+
+
+    return 0;
+}

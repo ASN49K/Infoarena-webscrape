@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+625206,1,1,0ms,248kb,Lungime incorecta!,YES,0
+625206,2,2,0ms,252kb,Lungime incorecta!,YES,0
+625206,3,3,0ms,248kb,Lungime incorecta!,YES,0
+625206,4,4,0ms,248kb,Blocked system call: (null).,NO,0
+625206,5,5,0ms,248kb,Blocked system call: (null).,NO,0
+625206,6,6,4ms,248kb,Blocked system call: (null).,NO,0
+625206,7,7,4ms,252kb,Blocked system call: (null).,NO,0
+625206,8,8,4ms,252kb,Blocked system call: (null).,NO,0
+625206,9,9,4ms,248kb,Blocked system call: (null).,NO,0
+625206,10,10,4ms,248kb,Blocked system call: (null).,NO,0

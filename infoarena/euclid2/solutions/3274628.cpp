@@ -1,0 +1,21 @@
+#include<fstream>
+using namespace std;
+int main()
+{
+    ifstream fin("Euclid2.in");
+    ofstream fout("Euclid2.out");
+    int T,a,b,i,r;
+    fin>>T;
+    for(i=1;i<=T;i++)
+    {
+        fin>>a>>b;
+        while(b!=0)
+        {
+            r=a%b;
+            a=b;
+            b=r;
+        }
+        fout<<a<<endl;
+    }
+    return 0;
+}

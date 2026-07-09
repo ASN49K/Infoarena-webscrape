@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+177079,1,1,0ms,12kb,Killed by signal 11(SIGSEGV).,NO,0
+177079,2,2,0ms,8kb,Lungime incorecta!,YES,0
+177079,3,3,Depăşit,256kb,Time limit exceeded.,NO,0
+177079,4,4,Depăşit,996kb,Time limit exceeded.,NO,0
+177079,5,5,8ms,12kb,Lungime incorecta!,YES,0
+177079,6,6,Depăşit,2260kb,Time limit exceeded.,NO,0
+177079,7,7,20ms,4212kb,Lungime incorecta!,YES,0
+177079,8,8,Depăşit,3844kb,Time limit exceeded.,NO,0
+177079,9,9,Depăşit,4216kb,Time limit exceeded.,NO,0
+177079,10,10,Depăşit,3440kb,Time limit exceeded.,NO,0

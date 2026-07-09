@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+513334,1,1,0ms,8kb,Non-zero exit status.,NO,0
+513334,2,2,0ms,8kb,Non-zero exit status.,NO,0
+513334,3,2,0ms,12kb,Non-zero exit status.,NO,0
+513334,4,3,0ms,12kb,Non-zero exit status.,NO,0
+513334,5,4,4ms,8kb,Non-zero exit status.,NO,0
+513334,6,5,0ms,12kb,Non-zero exit status.,NO,0
+513334,7,6,4ms,12kb,Non-zero exit status.,NO,0
+513334,8,6,0ms,8kb,Non-zero exit status.,NO,0
+513334,9,6,0ms,12kb,Non-zero exit status.,NO,0
+513334,10,6,4ms,8kb,Non-zero exit status.,NO,0

@@ -1,0 +1,46 @@
+#include<fstream.h>
+
+long int a[1025],b[1025],c[1025][1025];
+long int n,m,p;
+
+
+ifstream f("cmlsc.in");
+ofstream g("cmlsc.out");
+int max(int x,int y)
+{	if(x>y)return x ;
+	return y;
+}
+
+void cmlsc()
+{	
+	for(int i=1;i<=n;i++)
+	for(int j=1;j<=m;j++)
+		if(a[i]==b[j]) c[i][j]=c[i-1][j-1]+1; 
+		else c[i][j]=max(c[i-1][j],c[i][j-1]);
+
+}
+int main()
+{	f>>n>>m ;
+	int i,j;
+	for(i=1;i<=n;i++)
+		f>>a[i];
+	for(i=1;i<=m;i++)
+		f>>b[i];
+	cmlsc();
+	g<<c[n][m]<<"\n";
+  	for(i=n;i>=1;i--)
+	for(j=m;j>=1;j--)
+		if(a[i]==b[j]) {	g<<a[i]<<" ";
+					i--;
+					j--;
+				}
+		else  if(c[i-1][j]<=c[i][j-1]) j--;
+		else  	i--;
+	
+   
+	
+	
+	f.close();
+	g.close();
+	return 0;
+}

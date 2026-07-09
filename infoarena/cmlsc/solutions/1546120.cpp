@@ -1,0 +1,32 @@
+#include<fstream>
+using namespace std;
+ifstream fin ("cmlsc.in");
+ofstream fout ("cmlsc.out");
+int v[100],w[100],a[100][100],m,n,aux[100],k;
+int maxim(int x, int y)
+{
+    if(x>y)
+        return x;
+    return y;
+}
+int main()
+{
+    fin>>n>>m;
+    for(int i=1;i<=n;i++)
+        fin>>v[i];
+    for(int i=1;i<=m;i++)
+        fin>>w[i];
+    for(int i=1;i<=n;i++)
+        for(int j=1;j<=m;j++)
+            if(v[i]==w[j])
+                {
+                    a[i][j]=a[i-1][j-1]+1;
+                    aux[k++]=v[i];
+                }
+            else
+                a[i][j]=maxim(a[i-1][j],a[i][j-1]);
+    fout<<a[n][m]<<endl;
+    for(int i=0;i<k;i++)
+        fout<<aux[i]<<" ";
+    return 0;
+}

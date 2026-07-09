@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1131303,1,1,0ms,400kb,Raspuns corect!,YES,10
+1131303,2,2,0ms,360kb,Killed by signal 11(SIGSEGV).,NO,0
+1131303,3,3,0ms,364kb,Killed by signal 11(SIGSEGV).,NO,0
+1131303,4,4,0ms,364kb,Killed by signal 11(SIGSEGV).,NO,0
+1131303,5,5,0ms,360kb,Killed by signal 11(SIGSEGV).,NO,0
+1131303,6,6,0ms,372kb,Killed by signal 11(SIGSEGV).,NO,0
+1131303,7,7,0ms,368kb,Killed by signal 11(SIGSEGV).,NO,0
+1131303,8,8,0ms,368kb,Killed by signal 11(SIGSEGV).,NO,0
+1131303,9,9,4ms,576kb,Killed by signal 6(SIGABRT).,NO,0
+1131303,10,10,0ms,372kb,Killed by signal 11(SIGSEGV).,NO,0

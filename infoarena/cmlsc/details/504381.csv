@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+504381,1,1,0ms,16kb,Lungime incorecta!,YES,0
+504381,2,2,0ms,8kb,Subsir incorect!,YES,0
+504381,3,3,4ms,8kb,Subsir incorect!,YES,0
+504381,4,4,12ms,4036kb,Lungime incorecta!,YES,0
+504381,5,5,12ms,4268kb,Subsir incorect!,YES,0
+504381,6,6,36ms,Depăşit,Memory limit exceeded.,NO,0
+504381,7,7,48ms,Depăşit,Memory limit exceeded.,NO,0
+504381,8,8,52ms,Depăşit,Memory limit exceeded.,NO,0
+504381,9,9,52ms,Depăşit,Memory limit exceeded.,NO,0
+504381,10,10,52ms,Depăşit,Memory limit exceeded.,NO,0

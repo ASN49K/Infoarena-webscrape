@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2392470,1,1,2ms,131kb,OK,YES,10
+2392470,2,2,2ms,131kb,OK,YES,20
+2392470,3,2,2ms,131kb,OK,YES,20
+2392470,4,3,13ms,262kb,Incorect,YES,0
+2392470,5,4,17ms,393kb,Incorect,YES,0
+2392470,6,5,23ms,393kb,Incorect,YES,0
+2392470,7,6,15ms,262kb,Killed by Signal 11,NO,0
+2392470,8,6,19ms,262kb,Killed by Signal 11,NO,0
+2392470,9,6,20ms,262kb,Killed by Signal 11,NO,0
+2392470,10,6,14ms,262kb,Wall time limit exceeded,NO,0

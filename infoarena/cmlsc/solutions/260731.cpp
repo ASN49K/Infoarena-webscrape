@@ -1,0 +1,59 @@
+#include<fstream>
+#include<iostream>
+using namespace std;
+
+int max(int a, int b)
+{ if(a>b) return a;
+else return b;
+
+}
+int m,n,i,k,j,a[10000],b[10000],c[1024][1024];
+
+ void afisare(int i, int j)
+  {
+
+      
+            if (c[i-1][j] < c[i][j] && c[i][j-1] < c[i][j])
+            {
+                afisare(i-1, j-1 );
+                cout<< a[i] << ' ';
+            }
+            else if ((c[i-1][j] < c[i][j]) && (c[i][j-1] == c[i][j]))
+                afisare(i-1, j);
+            else if ((c[i][j-1] < c[i][j]) && (c[i-1][j] == c[i][j]))
+                afisare(i, j-1);
+            else if (c[i-1][j-1] == c[i][j])
+                afisare(i - 1, j - 1);
+            
+       
+  }
+int main()
+{
+
+
+
+ifstream f("cmlsc.in");
+f>>m>>n;
+for(i=1;i<=m;i++)
+f>>a[i];
+for(j=1;j<=n;j++)
+f>>b[j];
+f.close();
+
+ for(i=1;i<=m;i++)
+ for(j=1;j<=n;j++)
+ if(a[i]==b[j])
+ c[i][j]=c[i-1][j-1]+1;
+ else c[i][j]=max(c[i-1][j], c[i][j-1]);
+ 
+
+ofstream g("cmlsc.out");
+   g<<c[m][n]<<endl;
+   afisare(m,n);
+       
+   
+g.close();
+
+return 0;
+
+}

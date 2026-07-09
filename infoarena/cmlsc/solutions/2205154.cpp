@@ -1,0 +1,43 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+ifstream fin("nr.in");
+ofstream fout("nr.out");
+int a[105][105],x[105],y[105],n,m;
+void citire(int v[],int &n)
+{
+    fin>>n;
+    for(int i=1;i<=n;i++)
+        fin>>v[i];
+}
+void dinam()
+{
+    for(int i=1;i<=n;i++)
+        for(int j=1;j<=m;j++)
+            if(x[i]==y[j])
+                a[i][j]=a[i-1][j-1]+1;
+            else if(a[i][j-1]>a[i-1][j])
+                    a[i][j]=a[i][j-1];
+                else a[i][j]=a[i-1][j];
+}
+void drum(int i,int j)
+{
+    if(i!=0&&j!=0)
+        if(x[i]==y[j])
+        {
+            drum(i-1,j-1);
+            fout<<x[i]<<" ";
+        }
+        else if(a[i][j]==a[i][j-1])
+                drum(i,j-1);
+            else drum(i-1,j);
+}
+int main()
+{
+    citire(x,n);
+    citire(y,m);
+    dinam();
+    fout<<a[n][m]<<endl;
+    drum(n,m);
+    return 0;
+}

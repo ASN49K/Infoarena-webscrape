@@ -1,0 +1,15 @@
+var a,b,r:int64;
+begin
+assign(input,'cmmdc.in'); reset(input);
+assign(output,'cmmdc.out'); rewrite(output);
+read(a,b);
+r:=a mod b;
+while r<>0 do begin
+a:=b;
+b:=r;
+r:=a mod b;
+end;
+if b=1 then writeln(0)
+       else writeln(b);
+close(input); close(output);
+end.

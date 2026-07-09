@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+721813,1,1,0ms,368kb,Lungime incorecta!,YES,0
+721813,2,2,0ms,372kb,Raspuns corect!,YES,10
+721813,3,3,0ms,372kb,Raspuns corect!,YES,10
+721813,4,4,4ms,572kb,Lungime incorecta!,YES,0
+721813,5,5,4ms,624kb,Raspuns corect!,YES,10
+721813,6,6,8ms,1924kb,Lungime incorecta!,YES,0
+721813,7,7,12ms,3908kb,Lungime incorecta!,YES,0
+721813,8,8,12ms,3964kb,Lungime incorecta!,YES,0
+721813,9,9,16ms,4420kb,Raspuns corect!,YES,10
+721813,10,10,12ms,3636kb,Lungime incorecta!,YES,0

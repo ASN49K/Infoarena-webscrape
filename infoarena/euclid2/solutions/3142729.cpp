@@ -1,0 +1,20 @@
+#include <iostream>
+#include <fstream>
+#include <math.h>
+
+using namespace std;
+
+int main(){
+    ifstream in("euclid2.in");
+    ofstream out("euclid2.out");
+    int t;
+    int x, y;
+        in >> t;
+        while(t--){
+            in >> x >> y;
+            int d =  max(x, y) % min(x, y);
+            d == 0 ? out << min(x, y) << "\n" : out << d << "\n";
+        }
+    in.close();
+    out.close();
+}

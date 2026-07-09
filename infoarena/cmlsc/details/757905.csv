@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+757905,1,1,0ms,252kb,Lungime incorecta!,YES,0
+757905,2,2,0ms,252kb,Lungime incorecta!,YES,0
+757905,3,3,4ms,264kb,Killed by signal 6(SIGABRT).,NO,0
+757905,4,4,0ms,252kb,Killed by signal 11(SIGSEGV).,NO,0
+757905,5,5,0ms,248kb,Killed by signal 11(SIGSEGV).,NO,0
+757905,6,6,4ms,252kb,Killed by signal 11(SIGSEGV).,NO,0
+757905,7,7,4ms,248kb,Killed by signal 11(SIGSEGV).,NO,0
+757905,8,8,4ms,248kb,Killed by signal 11(SIGSEGV).,NO,0
+757905,9,9,4ms,248kb,Killed by signal 11(SIGSEGV).,NO,0
+757905,10,10,4ms,248kb,Killed by signal 11(SIGSEGV).,NO,0

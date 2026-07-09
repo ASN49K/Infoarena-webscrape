@@ -1,0 +1,20 @@
+#include <fstream>
+using namespace std;
+
+ifstream fin("cmmdc.in");
+ofstream fout("cmmdc.out");
+
+int main() {
+    int nr1, nr2, rest, x;
+    cin >> x;
+    for (int i = 1; i <= x; i++) {
+        fin >> nr1 >> nr2;
+
+        while (nr2) {
+            rest = nr1 % nr2;
+            nr1 = nr2;
+            nr2 = rest;
+        }
+        fout << nr1 << "\n";
+    }
+}

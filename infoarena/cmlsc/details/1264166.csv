@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1264166,1,1,0ms,412kb,Subsir incorect!,YES,0
+1264166,2,2,0ms,420kb,Subsir incorect!,YES,0
+1264166,3,3,0ms,424kb,Subsir incorect!,YES,0
+1264166,4,4,0ms,440kb,Killed by signal 11(SIGSEGV).,NO,0
+1264166,5,5,0ms,440kb,Killed by signal 11(SIGSEGV).,NO,0
+1264166,6,6,0ms,440kb,Killed by signal 11(SIGSEGV).,NO,0
+1264166,7,7,0ms,448kb,Killed by signal 11(SIGSEGV).,NO,0
+1264166,8,8,0ms,448kb,Killed by signal 11(SIGSEGV).,NO,0
+1264166,9,9,20ms,448kb,Killed by signal 11(SIGSEGV).,NO,0
+1264166,10,10,0ms,448kb,Killed by signal 11(SIGSEGV).,NO,0

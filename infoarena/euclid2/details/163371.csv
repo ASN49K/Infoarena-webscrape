@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+163371,1,1,0ms,8kb,Non-zero exit status.,NO,0
+163371,2,2,4ms,12kb,Non-zero exit status.,NO,0
+163371,3,2,4ms,8kb,Non-zero exit status.,NO,0
+163371,4,3,32ms,192kb,Non-zero exit status.,NO,0
+163371,5,4,56ms,188kb,Non-zero exit status.,NO,0
+163371,6,5,64ms,188kb,Non-zero exit status.,NO,0
+163371,7,6,88ms,192kb,Non-zero exit status.,NO,0
+163371,8,6,104ms,192kb,Non-zero exit status.,NO,0
+163371,9,6,Depăşit,188kb,Time limit exceeded.,NO,0
+163371,10,6,Depăşit,192kb,Time limit exceeded.,NO,0

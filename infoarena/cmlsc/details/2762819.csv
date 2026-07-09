@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2762819,1,1,3ms,131kb,Killed by Signal 11,NO,0
+2762819,2,2,2ms,131kb,Killed by Signal 11,NO,0
+2762819,3,3,3ms,262kb,Killed by Signal 11,NO,0
+2762819,4,4,5ms,1835kb,Killed by Signal 11,NO,0
+2762819,5,5,15ms,2228kb,Fisier de iesire corupt!,NO,0
+2762819,6,6,12ms,4325kb,Fisier de iesire corupt!,NO,0
+2762819,7,7,23ms,8388kb,Killed by Signal 11,NO,0
+2762819,8,8,18ms,7602kb,Killed by Signal 11,NO,0
+2762819,9,9,23ms,8388kb,Fisier de iesire corupt!,NO,0
+2762819,10,10,20ms,6815kb,Fisier de iesire corupt!,NO,0

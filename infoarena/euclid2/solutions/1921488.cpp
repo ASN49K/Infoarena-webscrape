@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    ifstream fin ("euclid2.in");
+    ofstream fout ("euclid2.out");
+    int t;
+    fin >> t;
+    while (t--)
+    {
+        int a, b;
+        fin >> a >> b;
+        fout << __gcd(a, b) << '\n';
+    }
+    return 0;
+}

@@ -1,0 +1,53 @@
+#include<fstream>
+using namespace std;
+int a[1026],b[1026],c[1026][1026],d[1026];
+int i,j,k,h;
+int n,m,nr=1;
+int main()
+{
+	ifstream f("cmlsc.in");
+	ofstream g("cmlsc.out");
+	f>>n>>m;
+	for(i=1;i<=n;i++)
+		f>>a[i];
+	for(j=1;j<=m;j++)
+		f>>b[j];
+	for(k=1;k<=n;k++)
+	{
+		for(h=1;h<=m;h++)
+			if(a[k]==b[h])
+				c[k][h]=c[k][h-1]+1;
+			else
+				if(c[k-1][h]>c[k][h-1])
+					c[k][h]=c[k-1][h];
+				else
+					c[k][h]=c[k][h-1];
+	}
+	/*for(i=0;i<=n;i++)
+	{
+		for(j=0;j<=m;j++)
+			g<<c[i][j]<<" ";
+			g<<"\n";
+	}*/
+	g<<c[n][m]<<"\n";
+	i=0;
+				k=n;
+				h=m;
+				while(k!=0&&h!=0)
+				{
+				if(a[k]==b[h])
+				{
+					d[i++]=a[k];
+					k--;
+					h--;
+				}
+					else
+						if(c[k][h]==c[k-1][h])
+							k--;
+						else
+							h--;
+				}
+						for(j=i-1;j>=0;j--)
+							g<<d[j]<<" ";
+						return 0;
+}

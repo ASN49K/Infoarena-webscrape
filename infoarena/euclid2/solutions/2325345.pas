@@ -1,0 +1,29 @@
+program alg_Euclid;
+
+var
+  f, g: text;
+  n, i: integer;
+  a, b, rez: uint64;
+
+function cmmdc(x, y: uint64): uint64;
+begin
+  if (y = 0) then cmmdc := x
+  else
+     cmmdc := cmmdc(y, x mod y);
+end;
+
+begin
+assign(f,'euclid2.in');
+reset(f);
+assign(g,'euclid2.out');
+rewrite(g);
+readln(f,n);
+for i:=1 to n do
+  begin
+  readln(f,a,b);
+  writeln(g,cmmdc(a,b));
+  
+  end;
+  close(f);
+  close(g);
+end.

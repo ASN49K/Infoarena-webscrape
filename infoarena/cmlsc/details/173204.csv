@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+173204,1,1,0ms,12kb,Subsir incorect!,YES,0
+173204,2,2,0ms,8kb,Subsir incorect!,YES,0
+173204,3,3,0ms,8kb,Subsir incorect!,YES,0
+173204,4,4,0ms,8kb,Non-zero exit status.,NO,0
+173204,5,5,4ms,8kb,Non-zero exit status.,NO,0
+173204,6,6,0ms,8kb,Non-zero exit status.,NO,0
+173204,7,7,0ms,8kb,Non-zero exit status.,NO,0
+173204,8,8,4ms,8kb,Non-zero exit status.,NO,0
+173204,9,9,0ms,12kb,Non-zero exit status.,NO,0
+173204,10,10,0ms,12kb,Non-zero exit status.,NO,0

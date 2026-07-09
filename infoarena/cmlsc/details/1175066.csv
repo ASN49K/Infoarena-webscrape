@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1175066,1,1,0ms,412kb,Raspuns corect!,YES,10
+1175066,2,2,60ms,420kb,Subsir incorect!,YES,0
+1175066,3,3,Depăşit,380kb,Time limit exceeded.,NO,0
+1175066,4,4,Depăşit,396kb,Time limit exceeded.,NO,0
+1175066,5,5,Depăşit,408kb,Time limit exceeded.,NO,0
+1175066,6,6,Depăşit,420kb,Time limit exceeded.,NO,0
+1175066,7,7,Depăşit,456kb,Time limit exceeded.,NO,0
+1175066,8,8,Depăşit,444kb,Time limit exceeded.,NO,0
+1175066,9,9,Depăşit,484kb,Time limit exceeded.,NO,0
+1175066,10,10,Depăşit,440kb,Time limit exceeded.,NO,0

@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1100800,1,1,0ms,232kb,Fisier de iesire lipsa,NO,0
+1100800,2,2,0ms,236kb,Fisier de iesire lipsa,NO,0
+1100800,3,2,0ms,232kb,Fisier de iesire lipsa,NO,0
+1100800,4,3,0ms,232kb,Blocked system call: (null).,NO,0
+1100800,5,4,0ms,236kb,Blocked system call: (null).,NO,0
+1100800,6,5,0ms,232kb,Fisier de iesire lipsa,NO,0
+1100800,7,6,0ms,236kb,Fisier de iesire lipsa,NO,0
+1100800,8,6,0ms,232kb,Fisier de iesire lipsa,NO,0
+1100800,9,6,Depăşit,232kb,Time limit exceeded.,NO,0
+1100800,10,6,0ms,232kb,Fisier de iesire lipsa,NO,0

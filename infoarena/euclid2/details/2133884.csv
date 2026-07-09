@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2133884,1,1,0ms,880kb,Killed by signal 6(SIGABRT).,NO,0
+2133884,2,2,0ms,880kb,Killed by signal 6(SIGABRT).,NO,0
+2133884,3,2,0ms,876kb,Killed by signal 6(SIGABRT).,NO,0
+2133884,4,3,Depăşit,864kb,Time limit exceeded.,NO,0
+2133884,5,4,Depăşit,880kb,Time limit exceeded.,NO,0
+2133884,6,5,0ms,876kb,Killed by signal 6(SIGABRT).,NO,0
+2133884,7,6,0ms,880kb,Killed by signal 6(SIGABRT).,NO,0
+2133884,8,6,0ms,880kb,Killed by signal 6(SIGABRT).,NO,0
+2133884,9,6,0ms,876kb,Killed by signal 6(SIGABRT).,NO,0
+2133884,10,6,Depăşit,816kb,Time limit exceeded.,NO,0

@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+809274,1,1,0ms,240kb,Raspuns corect!,YES,10
+809274,2,2,0ms,240kb,Raspuns corect!,YES,10
+809274,3,3,0ms,244kb,Raspuns corect!,YES,10
+809274,4,4,4ms,248kb,Lungime incorecta!,YES,0
+809274,5,5,4ms,280kb,Lungime incorecta!,YES,0
+809274,6,6,12ms,252kb,Lungime incorecta!,YES,0
+809274,7,7,16ms,288kb,Lungime incorecta!,YES,0
+809274,8,8,16ms,272kb,Lungime incorecta!,YES,0
+809274,9,9,4ms,276kb,Lungime incorecta!,YES,0
+809274,10,10,4ms,288kb,Wall time limit exceeded.,NO,0

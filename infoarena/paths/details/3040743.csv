@@ -1,0 +1,26 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+3040743,1,1,0ms,303kb,Incorect,YES,0
+3040743,2,1,0ms,303kb,Incorect,YES,0
+3040743,3,2,1ms,303kb,Incorect,YES,0
+3040743,4,2,1ms,303kb,Incorect,YES,0
+3040743,5,2,1ms,303kb,Incorect,YES,0
+3040743,6,3,24ms,819kb,Incorect,YES,0
+3040743,7,3,24ms,942kb,Incorect,YES,0
+3040743,8,3,19ms,819kb,Incorect,YES,0
+3040743,9,3,24ms,819kb,Incorect,YES,0
+3040743,10,4,114ms,1343kb,Incorect,YES,0
+3040743,11,4,103ms,1343kb,Incorect,YES,0
+3040743,12,4,124ms,1359kb,Incorect,YES,0
+3040743,13,4,59ms,1146kb,Incorect,YES,0
+3040743,14,4,114ms,1343kb,Incorect,YES,0
+3040743,15,5,400ms,47407kb,Time limit exceeded,NO,0
+3040743,16,5,401ms,48234kb,Time limit exceeded,NO,0
+3040743,17,5,401ms,47214kb,Time limit exceeded,NO,0
+3040743,18,6,401ms,47136kb,Time limit exceeded,NO,0
+3040743,19,6,401ms,47280kb,Time limit exceeded,NO,0
+3040743,20,6,401ms,47403kb,Time limit exceeded,NO,0
+3040743,21,6,401ms,47296kb,Time limit exceeded,NO,0
+3040743,22,6,401ms,47284kb,Time limit exceeded,NO,0
+3040743,23,6,401ms,47779kb,Time limit exceeded,NO,0
+3040743,24,6,401ms,47398kb,Time limit exceeded,NO,0
+3040743,25,6,401ms,47104kb,Time limit exceeded,NO,0

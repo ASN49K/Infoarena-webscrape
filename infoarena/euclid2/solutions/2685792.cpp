@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+#include <algorithm>
+using namespace std;
+ifstream fin("euclid2.in");
+ofstream fout("euclid2.out");
+int get(int a,int b)
+{   if(b==0)return a;
+    return get(b,a%b);
+}
+int main()
+{
+    int n,a,b;
+    fin>>n;
+    for(;n;--n){fin>>a>>b;fout<<get(a,b)<<endl;}
+    return 0;
+}

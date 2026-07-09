@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2038888,1,1,0ms,428kb,Lungime incorecta!,YES,0
+2038888,2,2,0ms,464kb,Fisier de iesire corupt!,NO,0
+2038888,3,3,0ms,480kb,Fisier de iesire corupt!,NO,0
+2038888,4,4,0ms,1212kb,Fisier de iesire corupt!,NO,0
+2038888,5,5,0ms,1436kb,Fisier de iesire corupt!,NO,0
+2038888,6,6,4ms,2484kb,Lungime incorecta!,YES,0
+2038888,7,7,8ms,4416kb,Fisier de iesire corupt!,NO,0
+2038888,8,8,8ms,4068kb,Fisier de iesire corupt!,NO,0
+2038888,9,9,12ms,4444kb,Fisier de iesire corupt!,NO,0
+2038888,10,10,8ms,3672kb,Lungime incorecta!,YES,0

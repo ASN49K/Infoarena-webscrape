@@ -1,0 +1,26 @@
+#include <fstream>
+
+using namespace std;
+
+int cmmdc(int a, int b){
+	while(b){
+		swap(a, b);
+		b=b%a;
+	}
+	return a;
+}
+
+int main(){
+	int n, a, b;
+	ifstream fpi("euclid2.in");
+	ofstream fpo("euclid2.out");
+	fpi>>n;
+	while(n){
+		fpi>>a>>b;
+		fpo<<cmmdc(a, b)<<"\n";
+		n--;
+	}
+	fpi.close();
+	fpo.close();
+	return 0;
+}

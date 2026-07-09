@@ -1,0 +1,26 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+3145364,1,1,1ms,303kb,Incorect,YES,0
+3145364,2,1,119ms,256802kb,Memory limit exceeded,NO,0
+3145364,3,2,119ms,256876kb,Memory limit exceeded,NO,0
+3145364,4,2,119ms,256966kb,Memory limit exceeded,NO,0
+3145364,5,2,1ms,303kb,Incorect,YES,0
+3145364,6,3,119ms,257019kb,Memory limit exceeded,NO,0
+3145364,7,3,119ms,256827kb,Memory limit exceeded,NO,0
+3145364,8,3,1ms,557kb,Incorect,YES,0
+3145364,9,3,1ms,557kb,Incorect,YES,0
+3145364,10,4,2ms,557kb,Incorect,YES,0
+3145364,11,4,2ms,557kb,Incorect,YES,0
+3145364,12,4,119ms,257097kb,Memory limit exceeded,NO,0
+3145364,13,4,119ms,257118kb,Memory limit exceeded,NO,0
+3145364,14,4,2ms,557kb,Incorect,YES,0
+3145364,15,5,238ms,260194kb,Memory limit exceeded,NO,0
+3145364,16,5,239ms,260194kb,Memory limit exceeded,NO,0
+3145364,17,5,238ms,260194kb,Memory limit exceeded,NO,0
+3145364,18,6,229ms,260194kb,Memory limit exceeded,NO,0
+3145364,19,6,44ms,15319kb,Incorect,YES,0
+3145364,20,6,44ms,15323kb,Incorect,YES,0
+3145364,21,6,148ms,259379kb,Memory limit exceeded,NO,0
+3145364,22,6,44ms,15355kb,Incorect,YES,0
+3145364,23,6,238ms,260194kb,Memory limit exceeded,NO,0
+3145364,24,6,44ms,15474kb,Incorect,YES,0
+3145364,25,6,143ms,258969kb,Memory limit exceeded,NO,0

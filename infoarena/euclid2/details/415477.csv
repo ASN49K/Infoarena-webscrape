@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+415477,1,1,0ms,12kb,Blocked system call: clone.,NO,0
+415477,2,2,4ms,8kb,Blocked system call: clone.,NO,0
+415477,3,2,0ms,8kb,Blocked system call: clone.,NO,0
+415477,4,3,Depăşit,376kb,Time limit exceeded.,NO,0
+415477,5,4,Depăşit,372kb,Time limit exceeded.,NO,0
+415477,6,5,Depăşit,372kb,Time limit exceeded.,NO,0
+415477,7,6,Depăşit,376kb,Time limit exceeded.,NO,0
+415477,8,6,Depăşit,372kb,Time limit exceeded.,NO,0
+415477,9,6,Depăşit,372kb,Time limit exceeded.,NO,0
+415477,10,6,Depăşit,372kb,Time limit exceeded.,NO,0

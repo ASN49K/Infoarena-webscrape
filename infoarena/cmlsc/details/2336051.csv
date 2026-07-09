@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+2336051,1,1,2ms,131kb,Lungime incorecta!,YES,0
+2336051,2,2,2ms,131kb,Raspuns corect!,YES,10
+2336051,3,3,73ms,20496kb,Memory limit exceeded,NO,0
+2336051,4,4,74ms,20496kb,Memory limit exceeded,NO,0
+2336051,5,5,67ms,20496kb,Memory limit exceeded,NO,0
+2336051,6,6,75ms,20496kb,Memory limit exceeded,NO,0
+2336051,7,7,76ms,20496kb,Memory limit exceeded,NO,0
+2336051,8,8,64ms,20496kb,Memory limit exceeded,NO,0
+2336051,9,9,73ms,20496kb,Memory limit exceeded,NO,0
+2336051,10,10,73ms,20496kb,Memory limit exceeded,NO,0

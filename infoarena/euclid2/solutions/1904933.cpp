@@ -1,0 +1,17 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main ()
+{long long n,a,b,r,i;
+ifstream fin("euclid2.in");
+ofstream fout("euclid2.out");
+fin>>n;
+for(i=1;i<=n;i++)
+    {fin>>a>>b;
+    while(b!=0)
+    {r=a%b;
+    a=b;
+    b=r;}
+    fout<<a<<'\n';}
+
+}

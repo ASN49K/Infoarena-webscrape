@@ -1,0 +1,31 @@
+#include<fstream>
+
+using namespace std;
+
+#define min(a,b) (a>b?b:a)
+#define max(a,b) (a<b?b:a)
+
+
+ifstream fin("euclid2.in");
+ifstream fout("euclid2.out");
+
+int div(int a, int b){
+int c;
+while(a%b!=0){
+c=a%b;
+a=b;
+b=c;
+}
+return b;
+}
+
+
+int main(){
+int t,a,b,i;
+fin>>t;
+for(i=1;i<=t;++i){
+cin>>a>>b;
+fout<<div(max(a,b),min(a,b))<<"\n";
+}
+return 0;
+}

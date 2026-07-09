@@ -1,0 +1,31 @@
+#include<iostream>	
+using namespace std;
+#include<fstream>
+int cmmdc(int a,int b)
+{
+	int r;
+	do
+	{
+		r=a%b;
+		a=b;
+		b=r;
+	}
+	while(r!=0);
+	return a;
+}
+int main()
+{
+	ifstream f("euclid.in");
+	ofstream g("euclid.out");
+	long n,x,y,i;
+	f>>n;
+	for(i=1;i<=n;i++)
+	{
+		f>>x>>y;
+		g<<cmmdc(x,y);
+		g<<endl;
+	}
+	f.close();
+	g.close();
+	return 0;
+}

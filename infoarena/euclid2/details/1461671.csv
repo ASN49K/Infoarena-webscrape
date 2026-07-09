@@ -1,0 +1,11 @@
+submission_id,test,subtask,time,memory,message,ok,subtask_points
+1461671,1,1,0ms,428kb,OK,YES,10
+1461671,2,2,0ms,428kb,OK,YES,20
+1461671,3,2,0ms,428kb,OK,YES,20
+1461671,4,3,0ms,408kb,Killed by signal 11(SIGSEGV).,NO,0
+1461671,5,4,0ms,412kb,Killed by signal 11(SIGSEGV).,NO,0
+1461671,6,5,0ms,412kb,Killed by signal 11(SIGSEGV).,NO,0
+1461671,7,6,0ms,412kb,Killed by signal 11(SIGSEGV).,NO,0
+1461671,8,6,0ms,412kb,Killed by signal 11(SIGSEGV).,NO,0
+1461671,9,6,0ms,412kb,Killed by signal 11(SIGSEGV).,NO,0
+1461671,10,6,0ms,412kb,Killed by signal 11(SIGSEGV).,NO,0
