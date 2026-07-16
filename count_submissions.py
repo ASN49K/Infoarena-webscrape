@@ -12,6 +12,12 @@ For each problem subdirectory it reports:
   - complete:    number of submissions that have a details file in a problem
                  whose tests AND hints both exist (0 if tests or hints are missing)
 
+A problem may be stored either as a plain directory (infoarena/<problem>/) or,
+once compressed by `infoarena_dump.py --zip`, as an archive (infoarena/<problem>.zip).
+Zipped problems are read straight out of the archive without unpacking, so
+counting never re-inflates them to disk. If both forms exist for a problem, the
+directory is used.
+
 Usage:
     python3 count_submissions.py                 # scans ./infoarena
     python3 count_submissions.py path/to/infoarena
@@ -22,56 +28,126 @@ import argparse
 import csv
 import os
 import sys
+import zipfile
 
 
-def count_csv_rows(path):
-    """Number of data rows (excluding the header) in a CSV, or 0 if unreadable."""
-    try:
-        with open(path, newline="", encoding="utf-8") as f:
-            n = sum(1 for _ in csv.reader(f))
-        return max(0, n - 1)          # drop the header row
-    except OSError:
+class DirSource:
+    """A problem stored as a plain directory on disk."""
+
+    def __init__(self, path):
+        self.path = os.path.normpath(path)
+        self.name = os.path.basename(self.path)
+
+    def files_in(self, subdir=""):
+        """File names directly inside subdir ('' = the problem's top level)."""
+        d = os.path.join(self.path, subdir) if subdir else self.path
+        if not os.path.isdir(d):
+            return []
+        return [e.name for e in os.scandir(d) if e.is_file()]
+
+    def read_text(self, rel):
+        """Full text of member `rel`, or None if it's absent/unreadable."""
+        try:
+            with open(os.path.join(self.path, rel), encoding="utf-8",
+                      errors="replace") as f:
+                return f.read()
+        except OSError:
+            return None
+
+
+class ZipSource:
+    """A problem stored as a <problem>.zip archive (read without unpacking).
+
+    Inside the archive every path is prefixed with a single top-level folder
+    (the problem directory as it was zipped), e.g. 'cmlsc/details/1.csv'. That
+    prefix is detected from the entries rather than assumed from the filename.
+    """
+
+    def __init__(self, path):
+        self.path = path
+        with zipfile.ZipFile(path) as z:
+            self.names = z.namelist()
+        tops = {n.split("/", 1)[0] for n in self.names if n}
+        # Normal case: one top-level folder == the problem name.
+        self.name = tops.pop() if len(tops) == 1 else os.path.basename(path)[:-4]
+
+    def files_in(self, subdir=""):
+        prefix = f"{self.name}/{subdir}/" if subdir else f"{self.name}/"
+        out = []
+        for n in self.names:
+            if n.startswith(prefix):
+                rest = n[len(prefix):]
+                if rest and "/" not in rest:      # a file directly inside prefix
+                    out.append(rest)
+        return out
+
+    def read_text(self, rel):
+        member = f"{self.name}/{rel}"
+        try:
+            with zipfile.ZipFile(self.path) as z, z.open(member) as f:
+                return f.read().decode("utf-8", "replace")
+        except (KeyError, OSError, zipfile.BadZipFile):
+            return None
+
+
+def count_csv_rows(src, name):
+    """Data rows (excluding the header) in member `name`, or 0 if unreadable."""
+    text = src.read_text(name)
+    if text is None:
         return 0
+    n = sum(1 for _ in csv.reader(text.splitlines()))
+    return max(0, n - 1)              # drop the header row
 
 
-def count_files(directory):
-    """Number of regular files directly inside `directory` (0 if it's absent)."""
-    if not os.path.isdir(directory):
-        return 0
-    return sum(1 for e in os.scandir(directory) if e.is_file())
+def scan_problem(src):
+    """Return a stats dict for one problem, from a Dir or Zip source."""
+    name = src.name
+    top_files = src.files_in("")
+    csv_name = f"{name}.csv"
+    if csv_name not in top_files:         # fall back to any single CSV present
+        csvs = [f for f in top_files if f.endswith(".csv")]
+        csv_name = csvs[0] if len(csvs) == 1 else csv_name
 
-
-def scan_problem(pdir):
-    """Return a stats dict for one problem directory."""
-    name = os.path.basename(pdir.rstrip("/"))
-    csv_path = os.path.join(pdir, f"{name}.csv")
-    if not os.path.isfile(csv_path):      # fall back to any single CSV in the dir
-        csvs = [e.path for e in os.scandir(pdir)
-                if e.is_file() and e.name.endswith(".csv")]
-        csv_path = csvs[0] if len(csvs) == 1 else csv_path
-
-    if os.path.isfile(os.path.join(pdir, "solution.txt")):
+    if "solution.txt" in top_files:
         hints = "yes"
-    elif os.path.isfile(os.path.join(pdir, "solution_MISSING.txt")):
+    elif "solution_MISSING.txt" in top_files:
         hints = "MISSING"
     else:
         hints = "-"
 
-    details = count_files(os.path.join(pdir, "details"))
-    has_tests = count_files(os.path.join(pdir, "tests")) > 0
+    details = len(src.files_in("details"))
+    has_tests = len(src.files_in("tests")) > 0
     has_hints = hints == "yes"
     # submissions with a details file, but only when tests and hints both exist
     complete = details if (has_tests and has_hints) else 0
 
     return {
         "problem":     name,
-        "submissions": count_csv_rows(csv_path),
-        "solutions":   count_files(os.path.join(pdir, "solutions")),
+        "submissions": count_csv_rows(src, csv_name),
+        "solutions":   len(src.files_in("solutions")),
         "details":     details,
         "tests":       "yes" if has_tests else "no",
         "hints":       hints,
         "complete":    complete,
     }
+
+
+def collect_sources(base):
+    """One source per problem under `base`; a directory wins over a .zip."""
+    sources = {}
+    for e in sorted(os.scandir(base), key=lambda e: e.name):
+        if e.is_dir():
+            sources[e.name] = DirSource(e.path)
+    for e in sorted(os.scandir(base), key=lambda e: e.name):
+        if e.is_file() and e.name.endswith(".zip"):
+            stem = e.name[:-4]
+            if stem not in sources:       # keep the uncompressed copy if present
+                try:
+                    sources[stem] = ZipSource(e.path)
+                except zipfile.BadZipFile:
+                    print(f"warning: skipping unreadable archive '{e.path}'",
+                          file=sys.stderr)
+    return [sources[k] for k in sorted(sources)]
 
 
 def main():
@@ -87,8 +163,7 @@ def main():
         print(f"error: '{args.base}' is not a directory", file=sys.stderr)
         return 1
 
-    problems = sorted(e.path for e in os.scandir(args.base) if e.is_dir())
-    stats = [scan_problem(p) for p in problems]
+    stats = [scan_problem(src) for src in collect_sources(args.base)]
 
     fields = ["problem", "submissions", "solutions", "details",
               "tests", "hints", "complete"]

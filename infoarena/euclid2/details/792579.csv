@@ -1,7 +1,0 @@
-submission_id,test,subtask,time,memory,message,ok,subtask_points
-792579,1,1,0ms,248kb,OK,YES,10
-792579,2,2,0ms,248kb,OK,YES,20
-792579,3,2,0ms,252kb,OK,YES,20
-792579,4,3,28ms,248kb,Fisier de iesire lipsa,NO,0
-792579,5,4,40ms,252kb,OK,YES,10
-792579,6,5,52ms,248kb,OK,YES,10

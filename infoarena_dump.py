@@ -23,6 +23,7 @@ Usage:
     python3 infoarena_dump.py cmlsc --no-details       # skip per-test reports
     python3 infoarena_dump.py cmlsc --no-solution      # skip the hints (solution.txt)
     python3 infoarena_dump.py cmlsc --no-attachments   # skip test data
+    python3 infoarena_dump.py cmlsc --zip              # compress to cmlsc.zip, drop the folder
     python3 infoarena_dump.py cmlsc --code-delay 0.05 --attach-delay 0.2
 
 Requires scrape_infoarena.py and download_attachments.py in the same folder.
@@ -31,6 +32,7 @@ Requires scrape_infoarena.py and download_attachments.py in the same folder.
 import argparse
 import csv
 import os
+import shutil
 import sys
 
 import scrape_infoarena as subs
@@ -104,6 +106,39 @@ def dump_attachments(task, tests_dir, delay, do_unzip):
                 print(f"  ! unzip {z}: {e}", file=sys.stderr)
 
 
+def zip_problem(root):
+    """Compress the problem directory <root> into <root>.zip and delete <root>.
+
+    The archive keeps the problem folder as its single top-level entry (so
+    `unzip infoarena/cmlsc.zip` restores infoarena/cmlsc/). The original tree is
+    removed afterwards to reclaim disk space. Returns the archive path.
+    """
+    root = os.path.normpath(root)
+    parent = os.path.dirname(root) or "."
+    name = os.path.basename(root)
+    archive = shutil.make_archive(root, "zip", root_dir=parent, base_dir=name)
+    shutil.rmtree(root)
+    return archive
+
+
+def unzip_problem(root):
+    """Restore a previously compressed problem: extract <root>.zip back into
+    <root>/ and delete the archive.
+
+    This is the inverse of zip_problem. Expanding the folder lets the normal
+    (resume-friendly) dump inspect what was already downloaded and fetch only
+    what is missing, instead of starting over. The archive is removed so the
+    run ends in a single, consistent state (re-created by zip_problem if the
+    run finishes with --zip). Returns the archive path that was expanded.
+    """
+    root = os.path.normpath(root)
+    archive = root + ".zip"
+    parent = os.path.dirname(root) or "."
+    shutil.unpack_archive(archive, parent, "zip")
+    os.remove(archive)
+    return archive
+
+
 def main():
     ap = argparse.ArgumentParser(description="Dump a full infoarena problem into one directory.")
     ap.add_argument("task", help="problem slug, e.g. cmlsc")
@@ -125,7 +160,16 @@ def main():
                     help="skip parsing per-test evaluation reports")
     ap.add_argument("--no-solution", action="store_true",
                     help="skip saving the problem's 'Indicatii de rezolvare' hints")
+    ap.add_argument("--no-statement", action="store_true",
+                    help="skip saving the problem's statement (statement.txt)")
     ap.add_argument("--no-attachments", action="store_true", help="skip downloading test data")
+    ap.add_argument("--zip", action="store_true",
+                    help="after processing, compress the problem directory into "
+                         "<root>.zip and delete the original folder to save disk space")
+    ap.add_argument("--force", action="store_true",
+                    help="discard an existing <root>.zip and re-dump from scratch "
+                         "(by default the archive is unzipped and the dump resumes "
+                         "into it, fetching only what is missing)")
     ap.add_argument("--no-unzip", action="store_true", help="do not extract .zip attachments")
     ap.add_argument("--code-delay", type=float, help="delay between source downloads (s)")
     ap.add_argument("--attach-delay", type=float, default=0.2,
@@ -140,6 +184,22 @@ def main():
         subs.COOKIE = args.cookie
 
     root = args.output or os.path.join(args.base_dir, args.task)
+
+    # A previously produced <root>.zip holds an earlier dump. Expand it back
+    # into <root>/ first so the resume-friendly dump below sees what was already
+    # downloaded and only fetches what is missing (then re-zips at the end).
+    # With --force we throw the old archive away and re-dump from scratch.
+    zip_path = os.path.normpath(root) + ".zip"
+    if os.path.exists(zip_path):
+        if args.force:
+            os.remove(zip_path)
+            print(f"[force] discarded {zip_path}; re-dumping from scratch",
+                  file=sys.stderr)
+        else:
+            print(f"[resume] expanding {zip_path} to check existing contents ...",
+                  file=sys.stderr)
+            unzip_problem(root)
+
     solutions_dir = os.path.join(root, "solutions")
     details_dir = os.path.join(root, "details")
     tests_dir = os.path.join(root, "tests")
@@ -160,10 +220,20 @@ def main():
         tag = "hints saved" if found else "NONE - marked MISSING"
         print(f"[solution] {tag} -> {path}", file=sys.stderr)
 
+    if not args.no_statement:
+        path, found = subs.save_statement(args.task, root)
+        tag = "statement saved" if found else "NONE - marked MISSING"
+        print(f"[statement] {tag} -> {path}", file=sys.stderr)
+
     if not args.no_attachments:
         dump_attachments(args.task, tests_dir, args.attach_delay, not args.no_unzip)
 
-    print(f"=== done: {root}/ ===", file=sys.stderr)
+    if args.zip:
+        archive = zip_problem(root)
+        print(f"[zip] {archive} (folder removed)", file=sys.stderr)
+        print(f"=== done: {archive} ===", file=sys.stderr)
+    else:
+        print(f"=== done: {root}/ ===", file=sys.stderr)
 
 
 if __name__ == "__main__":

@@ -14,9 +14,15 @@ commented out by default.
 
 Usage:
     python3 dump_archive.py                     # dump every listed problem
+    python3 dump_archive.py --zip               # dump each problem and compress it
     python3 dump_archive.py --cookie "SSID=..." # forward flags to infoarena_dump.py
     python3 dump_archive.py --no-attachments --max-pages 2
     python3 dump_archive.py --only cmlsc fmcm   # dump just these (still must be listed)
+
+With --zip, each problem is compressed to infoarena/<slug>.zip and its folder
+removed. A re-run then skips any problem whose .zip already exists (infoarena_dump.py
+does this), so an interrupted batch resumes cheaply without re-downloading finished
+problems. Pass --force to re-dump them anyway.
 
 Any option that is not --only/--list is passed straight through to every
 infoarena_dump.py call (e.g. --cookie, --no-attachments, --no-code, --langs).

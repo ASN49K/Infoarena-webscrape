@@ -30,7 +30,7 @@ JOB  = "https://www.infoarena.ro/job_detail"
 PROB = "https://www.infoarena.ro/problema"
 SITE = "https://www.infoarena.ro"
 PAGE_SIZE = 250          # rows per request (max that works reliably)
-DELAY = 0.25             # seconds between requests
+DELAY = 0.01             # seconds between requests
 UA = "Mozilla/5.0 (compatible; infoarena-scraper/1.0)"
 
 # Optional infoarena session cookie. Some submissions (older ones, or those you
@@ -319,9 +319,19 @@ def save_details(row, details_dir):
 INDICATII_RE = re.compile(
     r'<h[1-6][^>]*>\s*Indica[tţț]ii\s+de\s+rezolvare\s*</h[1-6]>', re.I)
 HEADING_RE   = re.compile(r'<h[1-6][\s>]', re.I)
+# The problem's own title <h1> (the site logo is <h1><a href="/">...</a></h1>):
+# the first h1 that is not that logo link.
+TITLE_RE     = re.compile(r'<h1[^>]*>(?!\s*<a\s+href="/")(.*?)</h1>', re.S | re.I)
+# Heading that marks the end of the statement (start of the solution hints or
+# the related-problems list). The hints heading is written both as "Indicatii
+# de rezolvare" and "Indicatii pentru rezolvare"; the trailing section is
+# "Probleme similare"/"Probleme asemanatoare". Diacritics optional.
+STATEMENT_END_RE = re.compile(
+    r'<h[1-6][^>]*>\s*(?:Indica[tţț]ii\b|Rezolvare\b'
+    r'|Probleme\s+(?:similare|asem[aă]n[aă]toare))', re.I)
 LINK_RE      = re.compile(r'<a\s+[^>]*href="([^"]+)"[^>]*>(.*?)</a>', re.S)
 BR_RE        = re.compile(r'<br\s*/?>', re.I)
-BLOCK_RE     = re.compile(r'</?(?:p|div|li|ul|ol|h[1-6]|pre|table|tr|blockquote)[^>]*>', re.I)
+BLOCK_RE     = re.compile(r'</?(?:p|div|li|ul|ol|h[1-6]|pre|table|tr|td|th|blockquote)[^>]*>', re.I)
 BLANKS_RE    = re.compile(r'\n{3,}')
 
 # Where the hints section ends: whichever of these comes first after the
@@ -369,6 +379,34 @@ def extract_indicatii(page_html):
     return text or None
 
 
+def extract_statement(page_html):
+    """Return the problem statement of a problem page, or None.
+
+    The statement is everything from the problem title down to (but excluding)
+    the 'Indicatii de rezolvare' hints, i.e. the sections 'Cerinta',
+    'Date de intrare', 'Date de iesire', 'Restrictii' and 'Exemplu'. The title
+    is prepended as the first line. If there are no hints, it runs to whichever
+    end marker (comments/attachments notice) comes first.
+    """
+    m = TITLE_RE.search(page_html)
+    if not m:
+        return None
+    title = _cell_text(m.group(1))
+    start = m.end()
+    end = len(page_html)
+    tail = STATEMENT_END_RE.search(page_html, start)  # hints / related-problems
+    if tail:
+        end = tail.start()
+    for marker in _END_MARKERS:
+        i = page_html.find(marker, start)
+        if i != -1:
+            end = min(end, i)
+    body = _html_to_text(page_html[start:end])
+    if not body:
+        return None
+    return f"{title}\n\n{body}" if title else body
+
+
 def fetch_problem_page(task):
     return get(f"{PROB}/{task}")
 
@@ -412,6 +450,50 @@ def save_solution(task, out_dir):
         return sol_path, True
 
     body = (f"# NO 'Indicatii de rezolvare' for problem '{task}'\n# {url}\n")
+    with open(missing_path, "w", encoding="utf-8") as f:
+        f.write(body)
+    return missing_path, False
+
+
+def save_statement(task, out_dir):
+    """Write the problem's statement (the 'Cerinta', I/O format, restrictions
+    and example sections) to out_dir.
+
+    - Found  -> 'statement.txt' with the statement (and the problem URL header).
+    - Missing-> 'statement_MISSING.txt' recording only the link, so problems
+      whose statement could not be parsed are easy to spot.
+
+    Like save_solution, a hand-added 'statement.txt' always takes priority: an
+    existing one is never overwritten, and any stale 'statement_MISSING.txt'
+    marker beside a real statement is removed.
+
+    Returns (path, found).
+    """
+    url = f"{PROB}/{task}"
+    st_path = os.path.join(out_dir, "statement.txt")
+    missing_path = os.path.join(out_dir, "statement_MISSING.txt")
+
+    # Respect an existing (possibly hand-written) statement.txt: keep it as-is.
+    if os.path.isfile(st_path):
+        if os.path.exists(missing_path):
+            os.remove(missing_path)
+        return st_path, True
+
+    try:
+        text = extract_statement(fetch_problem_page(task))
+    except Exception as e:
+        print(f"    ! statement {task}: {e}", file=sys.stderr)
+        text = None
+
+    if text:
+        body = f"# Statement - {task}\n# {url}\n\n{text}\n"
+        with open(st_path, "w", encoding="utf-8") as f:
+            f.write(body)
+        if os.path.exists(missing_path):    # drop a previous 'missing' marker
+            os.remove(missing_path)
+        return st_path, True
+
+    body = (f"# NO statement parsed for problem '{task}'\n# {url}\n")
     with open(missing_path, "w", encoding="utf-8") as f:
         f.write(body)
     return missing_path, False
@@ -568,6 +650,11 @@ def main():
                     help="also save the problem's 'Indicatii de rezolvare' hints to "
                          "solution.txt (or solution_MISSING.txt if there are none), "
                          "next to the output CSV")
+    ap.add_argument("--statement", action="store_true",
+                    help="also save the problem's statement (Cerinta, I/O format, "
+                         "restrictions and example) to statement.txt (or "
+                         "statement_MISSING.txt if it can't be parsed), next to the "
+                         "output CSV")
     ap.add_argument("--langs",
                     help="only save sources in these languages, comma-separated "
                          "(e.g. 'c,cpp,rust,python'). Others are skipped but still "
@@ -618,6 +705,12 @@ def main():
         path, found = save_solution(args.task, sol_dir)
         tag = "hints" if found else "MISSING"
         print(f"Solution ({tag}) -> {path}", file=sys.stderr)
+
+    if args.statement:
+        st_dir = os.path.dirname(os.path.abspath(out)) or "."
+        path, found = save_statement(args.task, st_dir)
+        tag = "statement" if found else "MISSING"
+        print(f"Statement ({tag}) -> {path}", file=sys.stderr)
 
 
 if __name__ == "__main__":

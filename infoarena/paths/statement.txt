@@ -1,0 +1,86 @@
+# Statement - paths
+# https://www.infoarena.ro/problema/paths
+
+Paths
+
+Portocal, pisica cea portocalie, a găsit un arbore (graf neorientat conex aciclic) cu N noduri numerotate de la 1 la N. Pe fiecare muchie i (1 ≤ i < N) care conectează nodurile xi şi yi se află ci gustări pentru pisici.
+
+Portocal poate alege exact K nodurii; pentru fiecare dintre nodurile alese, el va merge pe drumul de la rădăcina arborelui la nodul ales şi va mânca gustările de pe muchiile pe care trece. Evident, el poate mânca gustările de pe o muchie o singură dată. Deoarece Portocal este o pisică foarte curioasă din fire, el ar vrea să afle care este numărul maxim de gustări pe care le poate mânca, alegând optim cele K noduri, dacă rădăcina arborelui era nodul i, pentru fiecare i de la 1 la N.
+
+Date de intrare
+
+Fişierul de intrare paths.in va conţine pe prima linie două numere întregi N şi K, numărul de noduri ale arborelui şi respectiv numărul de noduri pe care Portocal le va alege. Următoarele N - 1 linii vor conţine câte 3 numere întregi, xi, yi şi ci, descriind muchiile arborelui.
+
+Date de ieşire
+
+Pe a i-a linie a fişierului de ieşire paths.out (pentru 1 ≤ i ≤ N) afişaţi numărul maxim de gustări pe care Portocal le poate mânca dacă rădăcina arborelui ar fi nodul i.
+
+Restricţii
+
+1 ≤ K ≤ N ≤ 100 000
+
+0 ≤ ci ≤ 1 000 000 000
+
+Pentru 8 puncte, N ≤ 18
+
+Pentru 12 puncte, N ≤ 200 şi K ≤ 20
+
+Pentru 16 puncte, N ≤ 1000 şi K ≤ 100
+
+Pentru 20 puncte, N ≤ 2000
+
+Pentru 12 puncte, K = 1
+
+Exemplu
+
+paths.in
+
+paths.out
+
+11 3
+
+1 2 5
+
+2 3 3
+
+2 6 5
+
+3 4 4
+
+3 5 2
+
+1 7 6
+
+7 8 4
+
+7 9 5
+
+1 10 1
+
+10 11 1
+
+28
+
+28
+
+28
+
+32
+
+30
+
+32
+
+28
+
+32
+
+32
+
+29
+
+30
+
+Explicaţie
+
+Dacă rădăcina este nodul 1, atunci Portocal poate alege nodurile 4, 6 şi 9. Drumurile de la rădăcină la nodurile alese vor fi 1 − 2 − 3 − 4, 1 − 2 − 6, 1 − 7 − 9 şi numărul total de gustări de pe aceste drumuri va fi 5 + 3 + 4 + 5 + 6 + 5 = 28. A se observa că gustările de pe muchia 1 − 2 au fost adunate o singură dată.
