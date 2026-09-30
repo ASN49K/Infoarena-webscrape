@@ -1,22 +1,4 @@
 #!/usr/bin/env python3
-"""
-Download all attachments of an infoarena problem and unzip any .zip files.
-
-The attachment list lives at:
-    https://www.infoarena.ro/problema/<task>?action=attach-list
-and each file is downloadable at:
-    https://www.infoarena.ro/problema/<task>?action=download&file=<name>&safe_only=false
-
-Usage:
-    python3 download_attachments.py cmlsc                  # -> cmlsc_attachments/
-    python3 download_attachments.py cmlsc -o mydir         # custom directory
-    python3 download_attachments.py cmlsc --no-unzip       # keep zips as-is
-    python3 download_attachments.py cmlsc --delay 0.2      # politeness delay
-
-Notes:
-- Test-case data is often large; be reasonable about how often you fetch it.
-- Already-downloaded files are skipped, so the script is resume-safe.
-"""
 
 import argparse
 import html
@@ -31,7 +13,6 @@ import zipfile
 BASE = "https://www.infoarena.ro/problema"
 UA = "Mozilla/5.0 (compatible; infoarena-scraper/1.0)"
 
-# filenames appear in the download links on the attach-list page
 FILE_RE = re.compile(r'action=download&amp;file=([^&"]+)&amp;safe_only')
 
 
@@ -42,16 +23,15 @@ def get(url):
 
 
 def list_attachments(task):
-    """Return the sorted, de-duplicated list of attachment filenames."""
     url = f"{BASE}/{task}?action=attach-list&display_entries=250"
     page = get(url).decode("utf-8", "replace")
     names = {html.unescape(m) for m in FILE_RE.findall(page)}
     return sorted(names)
 
 
-def download(task, name, dest_dir, delay):
+def download(task, name, dest_dir, delay, force=False):
     out_path = os.path.join(dest_dir, name)
-    if os.path.exists(out_path) and os.path.getsize(out_path) > 0:
+    if os.path.exists(out_path) and os.path.getsize(out_path) > 0 and not force:
         print(f"  = {name} (already downloaded)", file=sys.stderr)
         return out_path
     q = urllib.parse.quote(name)
@@ -65,7 +45,6 @@ def download(task, name, dest_dir, delay):
 
 
 def unzip(path, dest_dir):
-    """Extract a .zip into a folder named after the archive (without .zip)."""
     target = os.path.join(dest_dir, os.path.splitext(os.path.basename(path))[0])
     os.makedirs(target, exist_ok=True)
     with zipfile.ZipFile(path) as z:

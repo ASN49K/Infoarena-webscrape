@@ -1,109 +1,74 @@
 #!/usr/bin/env python3
-"""
-Batch-dump every problem from the infoarena "Arhiva educationala".
-
-This just calls infoarena_dump.py once per problem in the PROBLEMS list below,
-so each problem lands in infoarena/<slug>/ (CSV, solutions/, details/, tests/,
-solution.txt). Problems are processed independently: if one fails, the rest
-still run, and a summary is printed at the end.
-
-The list is a plain Python vector so you can curate it by hand: delete or
-comment out (with a leading '#') any problem you don't want. Interactive
-problems such as 'cbinteractiv' have no ordinary submissions/tests, so it is
-commented out by default.
-
-Usage:
-    python3 dump_archive.py                     # dump every listed problem
-    python3 dump_archive.py --zip               # dump each problem and compress it
-    python3 dump_archive.py --cookie "SSID=..." # forward flags to infoarena_dump.py
-    python3 dump_archive.py --no-attachments --max-pages 2
-    python3 dump_archive.py --only cmlsc fmcm   # dump just these (still must be listed)
-
-With --zip, each problem is compressed to infoarena/<slug>.zip and its folder
-removed. A re-run then skips any problem whose .zip already exists (infoarena_dump.py
-does this), so an interrupted batch resumes cheaply without re-downloading finished
-problems. Pass --force to re-dump them anyway.
-
-Any option that is not --only/--list is passed straight through to every
-infoarena_dump.py call (e.g. --cookie, --no-attachments, --no-code, --langs).
-
-Source list: https://www.infoarena.ro/arhiva-educationala  (63 problems)
-"""
 
 import argparse
 import os
 import subprocess
 import sys
 
-# --- the problems to dump ---------------------------------------------------
-# One slug per entry; the comment is the problem title, for reference.
-# Comment out or delete any line to exclude that problem from the dataset.
 PROBLEMS = [
-    "euclid2",        # Algoritmul lui Euclid
-    "cmlsc",          # Cel mai lung subsir comun
-    "euclid3",        # Algoritmul lui Euclid extins
-    "royfloyd",       # Floyd-Warshall/Roy-Floyd
-    "sortaret",       # Sortare topologica
-    "strmatch",       # Potrivirea sirurilor
-    "evaluare",       # Evaluarea unei expresii
-    "arbint",         # Arbori de intervale
-    "scmax",          # Subsir crescator maximal
-    "dijkstra",       # Algoritmul lui Dijkstra
-    "ciur",           # Ciurul lui Eratosthenes
-    "permutari",      # Generare de permutari
-    "lgput",          # Ridicare la putere in timp logaritmic
-    "bfs",            # BFS - Parcurgere in latime
-    "dfs",            # Parcurgere DFS - componente conexe
-    "aib",            # Arbori indexati binar
-    "rmq",            # Range minimum query
-    "combinari",      # Combinari
-    "cautbin",        # Cautare binara
-    "radixsort",      # Radix Sort
-    "cuplaj",         # Cuplaj maxim in graf bipartit
-    "inversmodular",  # Invers modular
-    "disjoint",       # Paduri de multimi disjuncte
-    "trie",           # Trie
-    "deque",          # Deque
-    "heapuri",        # Heapuri
-    "apm",            # Arbore partial de cost minim
-    "ctc",            # Componente tare conexe
-    "algsort",        # Sortare prin comparare
-    "infasuratoare",  # Infasuratoare convexa
-    "hashuri",        # Hashuri
-    "biconex",        # Componente biconexe
-    "maxflow",        # Flux maxim
-    "fmcm",           # Flux maxim de cost minim
-    "ciclueuler",     # Ciclu Eulerian
-    "ssm",            # Subsecventa de suma maxima
-    "podm",           # Parantezare optima de matrici
-    "hamilton",       # Ciclu hamiltonian de cost minim
-    "cmcm",           # Cuplaj maxim de cost minim
-    "huffman",        # Coduri Huffman
-    "lca",            # Lowest Common Ancestor
-    "2sat",           # 2SAT
-    "sdo",            # Statistici de ordine
-    "pinex",          # Principiul includerii si excluderii
-    "kfib",           # Al k-lea termen Fibonacci
-    "submultimi",     # Submultimi
-    "cmap",           # Cele mai apropiate puncte din plan
-    "bellmanford",    # Algoritmul Bellman-Ford
-    "ssnd",           # Suma si numarul divizorilor
-    "stirling",       # Numerele lui Stirling
-    "nim",            # Jocul NIM
-    "rucsac",         # Problema rucsacului
-    "gauss",          # Algoritmul lui Gauss
-    "heavypath",      # Heavy Path Decomposition
-    "damesah",        # Problema Damelor
-    "ahocorasick",    # Aho-Corasick
-    "aria",           # Aria
-    "elmaj",          # Elementul majoritar
-    "darb",           # Diametrul unui arbore
-    "mergeheap",      # Heapuri cu reuniune
-    # "cbinteractiv", # Cbinteractiv  (interactive problem - excluded from dataset)
-    "abce",           # Arbori binari de cautare echilibrati
-    "interclas",      # Interclasare
+    "euclid2",
+    "cmlsc",
+    "euclid3",
+    "royfloyd",
+    "sortaret",
+    "strmatch",
+    "evaluare",
+    "arbint",
+    "scmax",
+    "dijkstra",
+    "ciur",
+    "permutari",
+    "lgput",
+    "bfs",
+    "dfs",
+    "aib",
+    "rmq",
+    "combinari",
+    "cautbin",
+    "radixsort",
+    "cuplaj",
+    "inversmodular",
+    "disjoint",
+    "trie",
+    "deque",
+    "heapuri",
+    "apm",
+    "ctc",
+    "algsort",
+    "infasuratoare",
+    "hashuri",
+    "biconex",
+    "maxflow",
+    "fmcm",
+    "ciclueuler",
+    "ssm",
+    "podm",
+    "hamilton",
+    "cmcm",
+    "huffman",
+    "lca",
+    "2sat",
+    "sdo",
+    "pinex",
+    "kfib",
+    "submultimi",
+    "cmap",
+    "bellmanford",
+    "ssnd",
+    "stirling",
+    "nim",
+    "rucsac",
+    "gauss",
+    "heavypath",
+    "damesah",
+    "ahocorasick",
+    "aria",
+    "elmaj",
+    "darb",
+    "mergeheap",
+    "abce",
+    "interclas",
 ]
-# ---------------------------------------------------------------------------
 
 DUMP_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                            "infoarena_dump.py")
